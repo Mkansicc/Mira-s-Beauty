@@ -22,7 +22,7 @@ mobileNav?.querySelectorAll("a").forEach(a => {
    Put your number in international format:
    South Africa example: 27XXXXXXXXX (no +, no spaces)
 ========================= */
-const WHATSAPP_NUMBER = "27XXXXXXXXX"; // <-- CHANGE THIS
+const WHATSAPP_NUMBER = "27720654503"; // <-- CHANGE THIS
 const WHATSAPP_MESSAGE =
   "Hi Mira’s Beauty 👋 I would like to book. My preferred style is: ____ . Date/Time: ____ .";
 
