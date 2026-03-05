@@ -1,179 +1,76 @@
 "use strict";
 
-/* =========================
-   BASIC
-========================= */
+/* YEAR */
 const year = document.getElementById("year");
 if (year) year.textContent = new Date().getFullYear();
 
-/* Mobile menu */
+/* MOBILE MENU */
 const menuBtn = document.getElementById("menuBtn");
 const mobileNav = document.getElementById("mobileNav");
+menuBtn?.addEventListener("click", () => mobileNav.classList.toggle("show"));
+mobileNav?.querySelectorAll("a").forEach(a => a.addEventListener("click", () => mobileNav.classList.remove("show")));
 
-menuBtn?.addEventListener("click", () => {
-  mobileNav.classList.toggle("show");
-});
-mobileNav?.querySelectorAll("a").forEach(a => {
-  a.addEventListener("click", () => mobileNav.classList.remove("show"));
-});
-
-/* =========================
-   WHATSAPP LINK (EDIT THIS)
-   Put your number in international format:
-   South Africa example: 27XXXXXXXXX (no +, no spaces)
-========================= */
-const WHATSAPP_NUMBER = "27720654503"; // <-- CHANGE THIS
+/* WHATSAPP (EDIT THIS) */
+const WHATSAPP_NUMBER = "27720654503"; // change to your number (no +, no spaces)
 const WHATSAPP_MESSAGE =
-  "Hi Mira’s Beauty 👋 I would like to book. My preferred style is: ____ . Date/Time: ____ .";
+  "Hi Mira’s Beauty 👋 I would like to book. Style: ____ . Date/Time: ____ .";
 
 function waUrl() {
-  const msg = encodeURIComponent(WHATSAPP_MESSAGE);
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`;
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 }
-
 const waBtn = document.getElementById("waBtn");
 const waFloat = document.getElementById("waFloat");
 if (waBtn) waBtn.href = waUrl();
 if (waFloat) waFloat.href = waUrl();
 
-/* =========================
-   HERO IMAGE SLIDESHOW
-========================= */
-const heroSlides = Array.from(document.querySelectorAll(".hero-slide"));
-const heroDotsWrap = document.getElementById("heroDots");
-const heroPrev = document.getElementById("heroPrev");
-const heroNext = document.getElementById("heroNext");
+/* HERO SLIDESHOW */
+const slides = Array.from(document.querySelectorAll("#heroSlides .slide"));
+const dotsWrap = document.getElementById("heroDots");
+const prevBtn = document.getElementById("heroPrev");
+const nextBtn = document.getElementById("heroNext");
 
-let heroIndex = 0;
-let heroTimer = null;
+let idx = 0;
+let timer = null;
 
-function setHeroSlide(i) {
-  heroIndex = (i + heroSlides.length) % heroSlides.length;
-  heroSlides.forEach((s, idx) => s.classList.toggle("is-active", idx === heroIndex));
-
-  // dots
-  if (heroDotsWrap) {
-    const dots = Array.from(heroDotsWrap.querySelectorAll(".dot"));
-    dots.forEach((d, idx) => d.classList.toggle("active", idx === heroIndex));
+function setSlide(i) {
+  if (!slides.length) return;
+  idx = (i + slides.length) % slides.length;
+  slides.forEach((s, n) => s.classList.toggle("active", n === idx));
+  if (dotsWrap) {
+    dotsWrap.querySelectorAll(".dotbtn").forEach((d, n) => d.classList.toggle("active", n === idx));
   }
 }
 
-function buildHeroDots() {
-  if (!heroDotsWrap) return;
-  heroDotsWrap.innerHTML = "";
-  heroSlides.forEach((_, idx) => {
-    const dot = document.createElement("div");
-    dot.className = "dot" + (idx === 0 ? " active" : "");
-    dot.addEventListener("click", () => {
-      setHeroSlide(idx);
-      restartHeroTimer();
-    });
-    heroDotsWrap.appendChild(dot);
+function buildDots() {
+  if (!dotsWrap) return;
+  dotsWrap.innerHTML = "";
+  slides.forEach((_, n) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.className = "dotbtn" + (n === 0 ? " active" : "");
+    b.addEventListener("click", () => { setSlide(n); restart(); });
+    dotsWrap.appendChild(b);
   });
 }
 
-function restartHeroTimer() {
-  if (heroTimer) clearInterval(heroTimer);
-  heroTimer = setInterval(() => setHeroSlide(heroIndex + 1), 4500);
+function restart() {
+  if (timer) clearInterval(timer);
+  timer = setInterval(() => setSlide(idx + 1), 4500);
 }
 
-buildHeroDots();
-setHeroSlide(0);
-restartHeroTimer();
+buildDots();
+setSlide(0);
+restart();
 
-heroPrev?.addEventListener("click", () => { setHeroSlide(heroIndex - 1); restartHeroTimer(); });
-heroNext?.addEventListener("click", () => { setHeroSlide(heroIndex + 1); restartHeroTimer(); });
+prevBtn?.addEventListener("click", () => { setSlide(idx - 1); restart(); });
+nextBtn?.addEventListener("click", () => { setSlide(idx + 1); restart(); });
 
-/* =========================
-   VIDEO SLIDESHOW
-========================= */
-const videos = Array.from(document.querySelectorAll(".style-video"));
-const vPrev = document.getElementById("vPrev");
-const vNext = document.getElementById("vNext");
-const vPlay = document.getElementById("vPlay");
-const videoTitle = document.getElementById("videoTitle");
-const videoThumbs = document.getElementById("videoThumbs");
-
-let vIndex = 0;
-let isPlaying = false;
-
-// optional labels
-const VIDEO_LABELS = ["Style 1", "Style 2", "Style 3"];
-
-function showVideo(i) {
-  if (!videos.length) return;
-  vIndex = (i + videos.length) % videos.length;
-
-  videos.forEach((v, idx) => {
-    v.classList.toggle("is-active", idx === vIndex);
-    v.pause();
-    v.currentTime = 0;
-  });
-
-  if (videoTitle) videoTitle.textContent = VIDEO_LABELS[vIndex] || "Style Preview";
-
-  // thumbs active
-  if (videoThumbs) {
-    Array.from(videoThumbs.querySelectorAll(".vthumb")).forEach((t, idx) => {
-      t.classList.toggle("active", idx === vIndex);
-    });
-  }
-
-  if (isPlaying) {
-    videos[vIndex].play().catch(() => {});
-  }
-}
-
-function buildVideoThumbs() {
-  if (!videoThumbs) return;
-  videoThumbs.innerHTML = "";
-  videos.forEach((_, idx) => {
-    const btn = document.createElement("button");
-    btn.className = "vthumb" + (idx === 0 ? " active" : "");
-    btn.type = "button";
-    btn.innerHTML = `
-      <div><b>${VIDEO_LABELS[idx] || "Style " + (idx + 1)}</b><br><small>Tap to preview</small></div>
-      <div>▶</div>
-    `;
-    btn.addEventListener("click", () => showVideo(idx));
-    videoThumbs.appendChild(btn);
-  });
-}
-
-buildVideoThumbs();
-showVideo(0);
-
-// autoplay next when video ends (if playing)
-videos.forEach((v, idx) => {
-  v.addEventListener("ended", () => {
-    if (isPlaying) showVideo(idx + 1);
-  });
-});
-
-vPrev?.addEventListener("click", () => showVideo(vIndex - 1));
-vNext?.addEventListener("click", () => showVideo(vIndex + 1));
-
-vPlay?.addEventListener("click", () => {
-  if (!videos.length) return;
-  isPlaying = !isPlaying;
-
-  if (isPlaying) {
-    vPlay.textContent = "Pause";
-    videos[vIndex].play().catch(() => {});
-  } else {
-    vPlay.textContent = "Play";
-    videos[vIndex].pause();
-  }
-});
-
-/* =========================
-   INSTAGRAM LIGHTBOX
-========================= */
+/* GALLERY LIGHTBOX */
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightboxImg");
-const lightboxClose = document.getElementById("lightboxClose");
+const closeBtn = document.getElementById("lightboxClose");
 
-document.querySelectorAll(".ig-item").forEach(btn => {
+document.querySelectorAll(".ig").forEach(btn => {
   btn.addEventListener("click", () => {
     const full = btn.getAttribute("data-full");
     if (!full || !lightbox || !lightboxImg) return;
@@ -189,18 +86,11 @@ function closeLightbox() {
   lightbox.setAttribute("aria-hidden", "true");
   if (lightboxImg) lightboxImg.src = "";
 }
+closeBtn?.addEventListener("click", closeLightbox);
+lightbox?.addEventListener("click", (e) => { if (e.target === lightbox) closeLightbox(); });
+document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeLightbox(); });
 
-lightboxClose?.addEventListener("click", closeLightbox);
-lightbox?.addEventListener("click", (e) => {
-  if (e.target === lightbox) closeLightbox();
-});
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") closeLightbox();
-});
-
-/* =========================
-   REVIEWS SLIDER
-========================= */
+/* REVIEWS SLIDER */
 const reviewCard = document.getElementById("reviewCard");
 const rPrev = document.getElementById("rPrev");
 const rNext = document.getElementById("rNext");
@@ -216,49 +106,56 @@ const REVIEWS = [
 let rIndex = 0;
 let rTimer = null;
 
-function stars(n) {
-  return "⭐".repeat(Math.max(0, Math.min(5, n)));
-}
+function starLine(n){ return "⭐".repeat(Math.max(0, Math.min(5, n))); }
 
-function renderReview(i) {
+function renderReview(i){
   rIndex = (i + REVIEWS.length) % REVIEWS.length;
   const r = REVIEWS[rIndex];
 
-  if (reviewCard) {
+  if (reviewCard){
     reviewCard.innerHTML = `
       <div class="review-top">
         <div class="review-name">${r.name}</div>
-        <div class="review-stars">${stars(r.stars)}</div>
+        <div class="review-stars">${starLine(r.stars)}</div>
       </div>
       <p class="review-text">${r.text}</p>
     `;
   }
 
-  if (reviewDots) {
-    const dots = Array.from(reviewDots.querySelectorAll(".dot"));
-    dots.forEach((d, idx) => d.classList.toggle("active", idx === rIndex));
+  if (reviewDots){
+    reviewDots.querySelectorAll(".dotbtn").forEach((d,n)=>d.classList.toggle("active", n===rIndex));
   }
 }
 
-function buildReviewDots() {
+function buildReviewDots(){
   if (!reviewDots) return;
   reviewDots.innerHTML = "";
-  REVIEWS.forEach((_, idx) => {
-    const d = document.createElement("div");
-    d.className = "dot" + (idx === 0 ? " active" : "");
-    d.addEventListener("click", () => { renderReview(idx); restartReviewTimer(); });
-    reviewDots.appendChild(d);
+  REVIEWS.forEach((_, n) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.className = "dotbtn" + (n === 0 ? " active" : "");
+    b.addEventListener("click", () => { renderReview(n); restartReview(); });
+    reviewDots.appendChild(b);
   });
 }
 
-function restartReviewTimer() {
+function restartReview(){
   if (rTimer) clearInterval(rTimer);
   rTimer = setInterval(() => renderReview(rIndex + 1), 5200);
 }
 
 buildReviewDots();
 renderReview(0);
-restartReviewTimer();
+restartReview();
 
-rPrev?.addEventListener("click", () => { renderReview(rIndex - 1); restartReviewTimer(); });
-rNext?.addEventListener("click", () => { renderReview(rIndex + 1); restartReviewTimer(); });
+rPrev?.addEventListener("click", () => { renderReview(rIndex - 1); restartReview(); });
+rNext?.addEventListener("click", () => { renderReview(rIndex + 1); restartReview(); });
+
+/* IMAGE FALLBACK (prevents ugly broken icons) */
+document.querySelectorAll("img").forEach(img => {
+  img.addEventListener("error", () => {
+    img.style.opacity = "0";
+    const parent = img.parentElement;
+    if (parent) parent.style.background = "linear-gradient(135deg, rgba(255,79,163,.16), rgba(143,91,255,.16))";
+  });
+});
