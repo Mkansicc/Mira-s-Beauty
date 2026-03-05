@@ -2,319 +2,399 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Mira’s Beauty | Luxury Braids & Beauty</title>
-  <meta name="description" content="Mira’s Beauty – Luxury braids and beauty. Book via WhatsApp. View prices, gallery and reviews." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mira’s Beauty | Salon • Braids • Nails • Beauty</title>
+  <meta name="description" content="Mira’s Beauty – Professional salon styles. Braids, nails and beauty. Book via WhatsApp. View prices & gallery." />
   <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
-  <!-- Top strip -->
-  <div class="topstrip">
-    <div class="container topstrip-inner">
-      <span>✨ Luxury Braids • Neat Parts • Clean Finish</span>
-      <span class="dot">•</span>
-      <a href="#prices">Prices</a>
-      <span class="dot">•</span>
-      <a href="#gallery">Gallery</a>
+  <!-- TOP PROMO STRIP (like a store banner, but for salon promos) -->
+  <div class="topbar" role="banner">
+    <div class="container topbar-inner">
+      <div class="topbar-left">
+        <span class="sparkle">✨</span>
+        <span><b>Special:</b> 10% off first booking (T&Cs apply)</span>
+        <span class="sep">•</span>
+        <span><b>Open:</b> Mon–Sat</span>
+      </div>
+      <div class="topbar-right">
+        <a class="topbar-link" href="#prices">View Prices</a>
+        <span class="sep">•</span>
+        <a class="topbar-link" href="#contact">Book Now</a>
+      </div>
     </div>
   </div>
 
-  <!-- Header -->
+  <!-- HEADER -->
   <header class="header" id="home">
     <div class="container header-inner">
-      <a class="brand" href="#home" aria-label="Mira’s Beauty home">
-        <div class="logo">MB</div>
-        <div>
+      <a class="brand" href="#home" aria-label="Mira's Beauty Home">
+        <div class="brand-mark">MB</div>
+        <div class="brand-text">
           <div class="brand-name">Mira’s Beauty</div>
           <div class="brand-sub">Salon • Braids • Nails • Beauty</div>
         </div>
       </a>
 
-      <button class="burger" id="menuBtn" aria-label="Open menu">
+      <!-- Desktop search -->
+      <div class="searchbox" role="search" aria-label="Search styles">
+        <span class="search-ico">⌕</span>
+        <input id="searchInput" type="search" placeholder="Search styles: knotless, box braids, cornrows..." />
+      </div>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
 
       <nav class="nav" id="nav">
-        <a href="#services">Services</a>
+        <a href="#categories">Categories</a>
         <a href="#featured">Featured</a>
         <a href="#prices">Prices</a>
         <a href="#gallery">Gallery</a>
         <a href="#reviews">Reviews</a>
-        <a href="#contact" class="nav-cta">Book</a>
+        <a class="nav-cta" href="#contact">WhatsApp Booking</a>
       </nav>
     </div>
 
+    <!-- Mobile nav -->
     <nav class="mobile-nav" id="mobileNav">
-      <a href="#services">Services</a>
+      <a href="#categories">Categories</a>
       <a href="#featured">Featured</a>
       <a href="#prices">Prices</a>
       <a href="#gallery">Gallery</a>
       <a href="#reviews">Reviews</a>
-      <a href="#contact">Book</a>
+      <a href="#contact">WhatsApp Booking</a>
     </nav>
   </header>
 
-  <!-- Hero -->
+  <!-- HERO -->
   <section class="hero">
     <div class="hero-bg"></div>
 
     <div class="container hero-grid">
-      <div class="hero-left">
-        <div class="badge">
-          <span class="pulse"></span>
-          Premium Salon Styles • WhatsApp Booking
+      <div class="hero-copy">
+        <div class="hero-pill">
+          <span class="pill-dot"></span>
+          Premium salon finishing • Neat parts • Clean look
         </div>
 
-        <h1>Luxury braids that turn heads.</h1>
-        <p class="lead">
-          Clean sections, neat finishing, and styles that last. Browse prices and pick your favourite look from our gallery.
+        <h1>Beautiful hair. Luxury finishing.</h1>
+        <p class="hero-sub">
+          Book quickly on WhatsApp, choose a style from the gallery, and get a clean professional result.
         </p>
 
-        <div class="cta-row">
-          <a class="btn primary" href="#contact">Book on WhatsApp</a>
-          <a class="btn ghost" href="#gallery">View Gallery</a>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact">Book on WhatsApp</a>
+          <a class="btn btn-ghost" href="#prices">See Prices</a>
         </div>
 
-        <div class="trust">
-          <div class="trust-card">
-            <div class="trust-big">⭐ 4.9</div>
-            <div class="trust-small">Client rating</div>
+        <div class="hero-metrics">
+          <div class="metric">
+            <div class="metric-big">⭐ 4.9</div>
+            <div class="metric-small">Client rating</div>
           </div>
-          <div class="trust-card">
-            <div class="trust-big">💎 Clean</div>
-            <div class="trust-small">Hygiene first</div>
+          <div class="metric">
+            <div class="metric-big">⏱️ Fast</div>
+            <div class="metric-small">Neat & professional</div>
           </div>
-          <div class="trust-card">
-            <div class="trust-big">⏱️ Fast</div>
-            <div class="trust-small">Neat & professional</div>
+          <div class="metric">
+            <div class="metric-big">💎 Clean</div>
+            <div class="metric-small">Hygiene first</div>
           </div>
         </div>
       </div>
 
-      <div class="hero-right">
-        <div class="hero-frame">
-          <div class="hero-slides" id="heroSlides">
-            <div class="slide active">
-              <img src="./images/hero1.jpg" alt="Knotless braids" loading="eager">
-              <div class="caption">Knotless Braids • Natural Finish</div>
-            </div>
-            <div class="slide">
-              <img src="./images/hero2.jpg" alt="Box braids" loading="lazy">
-              <div class="caption">Box Braids • Classic Look</div>
-            </div>
-            <div class="slide">
-              <img src="./images/hero3.jpg" alt="Fulani braids" loading="lazy">
-              <div class="caption">Fulani Braids • Elegant Detail</div>
-            </div>
-
-            <button class="arrow left" id="heroPrev" aria-label="Previous">‹</button>
-            <button class="arrow right" id="heroNext" aria-label="Next">›</button>
-
-            <div class="dots" id="heroDots" aria-label="Slideshow dots"></div>
-          </div>
-
-          <div class="hero-bottom">
-            <div class="mini">
-              <span class="pill">🔥 Popular</span>
-              <span>Knotless • Box • Stitch • Cornrows</span>
-            </div>
-            <div class="mini">
-              <span class="pill soft">📩</span>
-              <span>Send a style screenshot for a quick quote</span>
+      <!-- Hero slideshow (store-like banner look) -->
+      <div class="hero-media" aria-label="Hero slideshow">
+        <div class="slideshow" id="slideshow">
+          <div class="hs-slide is-active">
+            <img src="./images/hero1.jpg" alt="Mira’s Beauty style 1" loading="eager" />
+            <div class="hs-caption">
+              <div class="hs-title">Knotless Braids</div>
+              <div class="hs-sub">Natural finish • clean parts</div>
             </div>
           </div>
+
+          <div class="hs-slide">
+            <img src="./images/hero2.jpg" alt="Mira’s Beauty style 2" loading="lazy" />
+            <div class="hs-caption">
+              <div class="hs-title">Box Braids</div>
+              <div class="hs-sub">Classic look • long lasting</div>
+            </div>
+          </div>
+
+          <div class="hs-slide">
+            <img src="./images/hero3.jpg" alt="Mira’s Beauty style 3" loading="lazy" />
+            <div class="hs-caption">
+              <div class="hs-title">Fulani Braids</div>
+              <div class="hs-sub">Elegant detail • beads optional</div>
+            </div>
+          </div>
+
+          <button class="hs-nav hs-prev" id="hsPrev" aria-label="Previous slide">‹</button>
+          <button class="hs-nav hs-next" id="hsNext" aria-label="Next slide">›</button>
+          <div class="hs-dots" id="hsDots" aria-label="Slideshow dots"></div>
+        </div>
+
+        <div class="hero-strip">
+          <div class="strip-item"><b>Location:</b> Pretoria</div>
+          <div class="strip-item"><b>Booking:</b> WhatsApp</div>
+          <div class="strip-item"><b>Payment:</b> Cash / EFT</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Services -->
-  <section class="section" id="services">
+  <!-- CATEGORIES (like ecommerce tiles) -->
+  <section class="section" id="categories">
     <div class="container">
       <div class="section-head">
-        <h2>Services</h2>
-        <p>Luxury salon experience with neat styling and beautiful finishing.</p>
+        <h2>Categories</h2>
+        <p>Browse like a store — choose what you want, then book.</p>
       </div>
 
-      <div class="grid3">
-        <div class="card">
-          <div class="icon">💇🏽‍♀️</div>
-          <h3>Braids</h3>
-          <p>Knotless, box braids, stitch braids, fulani, twists and more.</p>
-        </div>
-        <div class="card">
-          <div class="icon">✨</div>
-          <h3>Beauty</h3>
-          <p>Clean styling, edges, finishing and haircare advice.</p>
-        </div>
-        <div class="card">
-          <div class="icon">💅</div>
-          <h3>Nails</h3>
-          <p>Classic, gel, tips, simple designs (ask availability).</p>
-        </div>
+      <div class="cat-grid">
+        <a class="cat" href="#prices" data-filter="braids">
+          <div class="cat-emoji">💇🏽‍♀️</div>
+          <div class="cat-title">Braids</div>
+          <div class="cat-sub">Knotless • Box • Fulani • Cornrows</div>
+        </a>
+
+        <a class="cat" href="#prices" data-filter="nails">
+          <div class="cat-emoji">💅</div>
+          <div class="cat-title">Nails</div>
+          <div class="cat-sub">Gel • Tips • Simple designs</div>
+        </a>
+
+        <a class="cat" href="#prices" data-filter="beauty">
+          <div class="cat-emoji">✨</div>
+          <div class="cat-title">Beauty</div>
+          <div class="cat-sub">Finishing • Edges • Styling</div>
+        </a>
+
+        <a class="cat" href="#gallery">
+          <div class="cat-emoji">🖼️</div>
+          <div class="cat-title">Gallery</div>
+          <div class="cat-sub">Tap photos to preview</div>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- Featured styles -->
-  <section class="section alt" id="featured">
+  <!-- FEATURED (store-like product grid) -->
+  <section class="section section-alt" id="featured">
     <div class="container">
       <div class="section-head">
         <h2>Featured Styles</h2>
-        <p>Quick previews. Replace images in <b>/images</b>.</p>
+        <p>Popular picks (you can edit names and prices anytime).</p>
       </div>
 
-      <div class="featured">
-        <div class="featured-big">
-          <img src="./images/knotless.jpg" alt="Featured style" loading="lazy">
-          <div class="featured-overlay">
-            <div class="featured-title">Premium Knotless</div>
-            <div class="featured-sub">Natural look • clean finish</div>
-          </div>
+      <div class="toolbar">
+        <div class="tabs" role="tablist" aria-label="Style filters">
+          <button class="tab is-active" data-tab="all" type="button">All</button>
+          <button class="tab" data-tab="braids" type="button">Braids</button>
+          <button class="tab" data-tab="nails" type="button">Nails</button>
+          <button class="tab" data-tab="beauty" type="button">Beauty</button>
         </div>
 
-        <div class="featured-side">
-          <div class="featured-small">
-            <img src="./images/boxbraids.jpg" alt="Box braids" loading="lazy">
-            <div class="featured-tag">Box Braids</div>
+        <div class="mini-note">Tip: Use the search box on top to filter quickly.</div>
+      </div>
+
+      <div class="cards" id="cards">
+        <!-- Braids -->
+        <article class="cardx" data-cat="braids" data-name="knotless braids">
+          <img src="./images/knotless.jpg" alt="Knotless braids" loading="lazy" />
+          <div class="cardx-body">
+            <div class="cardx-top">
+              <h3>Knotless Braids</h3>
+              <span class="badge">Popular</span>
+            </div>
+            <p>Natural look • clean finish</p>
+            <div class="cardx-row">
+              <span class="from">From</span>
+              <span class="price">R550</span>
+            </div>
           </div>
-          <div class="featured-small">
-            <img src="./images/stitch.jpg" alt="Stitch braids" loading="lazy">
-            <div class="featured-tag">Stitch Braids</div>
+        </article>
+
+        <article class="cardx" data-cat="braids" data-name="box braids">
+          <img src="./images/boxbraids.jpg" alt="Box braids" loading="lazy" />
+          <div class="cardx-body">
+            <div class="cardx-top">
+              <h3>Box Braids</h3>
+              <span class="badge soft">Classic</span>
+            </div>
+            <p>Protective style • neat parts</p>
+            <div class="cardx-row">
+              <span class="from">From</span>
+              <span class="price">R500</span>
+            </div>
           </div>
-          <div class="featured-small">
-            <img src="./images/cornrows.jpg" alt="Cornrows" loading="lazy">
-            <div class="featured-tag">Cornrows</div>
+        </article>
+
+        <article class="cardx" data-cat="braids" data-name="fulani braids">
+          <img src="./images/fulani.jpg" alt="Fulani braids" loading="lazy" />
+          <div class="cardx-body">
+            <div class="cardx-top">
+              <h3>Fulani Braids</h3>
+              <span class="badge soft">Elegant</span>
+            </div>
+            <p>Detail look • beads optional</p>
+            <div class="cardx-row">
+              <span class="from">From</span>
+              <span class="price">R450</span>
+            </div>
           </div>
-        </div>
+        </article>
+
+        <article class="cardx" data-cat="braids" data-name="cornrows">
+          <img src="./images/cornrows.jpg" alt="Cornrows" loading="lazy" />
+          <div class="cardx-body">
+            <div class="cardx-top">
+              <h3>Cornrows</h3>
+              <span class="badge soft">Neat</span>
+            </div>
+            <p>Scalp braiding • clean lines</p>
+            <div class="cardx-row">
+              <span class="from">From</span>
+              <span class="price">R250</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="cardx" data-cat="braids" data-name="stitch braids">
+          <img src="./images/stitch.jpg" alt="Stitch braids" loading="lazy" />
+          <div class="cardx-body">
+            <div class="cardx-top">
+              <h3>Stitch Braids</h3>
+              <span class="badge soft">Trendy</span>
+            </div>
+            <p>Stitch lines • stylish look</p>
+            <div class="cardx-row">
+              <span class="from">From</span>
+              <span class="price">R300</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="cardx" data-cat="braids" data-name="goddess braids">
+          <img src="./images/goddess.jpg" alt="Goddess braids" loading="lazy" />
+          <div class="cardx-body">
+            <div class="cardx-top">
+              <h3>Goddess Braids</h3>
+              <span class="badge">Luxury</span>
+            </div>
+            <p>Curly finish • premium look</p>
+            <div class="cardx-row">
+              <span class="from">From</span>
+              <span class="price">R600</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Nails (placeholders — replace with your nail images later) -->
+        <article class="cardx" data-cat="nails" data-name="gel nails">
+          <div class="img-placeholder">
+            <div class="ph">💅</div>
+          </div>
+          <div class="cardx-body">
+            <div class="cardx-top"><h3>Gel Nails</h3><span class="badge soft">Nails</span></div>
+            <p>Neat finish • glossy look</p>
+            <div class="cardx-row"><span class="from">From</span><span class="price">R180</span></div>
+          </div>
+        </article>
+
+        <article class="cardx" data-cat="beauty" data-name="edges styling">
+          <div class="img-placeholder">
+            <div class="ph">✨</div>
+          </div>
+          <div class="cardx-body">
+            <div class="cardx-top"><h3>Edges & Finishing</h3><span class="badge soft">Beauty</span></div>
+            <p>Clean look • perfect finish</p>
+            <div class="cardx-row"><span class="from">From</span><span class="price">R50</span></div>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- Prices -->
+  <!-- PRICES (simple list + note) -->
   <section class="section" id="prices">
     <div class="container">
       <div class="section-head">
-        <h2>Prices (Braids)</h2>
-        <p>Prices may vary by length/size. Confirm your final quote on WhatsApp.</p>
+        <h2>Prices</h2>
+        <p>Prices may change depending on length/size/hair. Confirm final quote on WhatsApp.</p>
       </div>
 
-      <div class="price-grid">
-        <article class="price-card">
-          <img src="./images/knotless.jpg" alt="Knotless braids" loading="lazy">
-          <div class="price-body">
-            <h3>Knotless Braids</h3>
-            <p>Natural look • neat finish</p>
-            <div class="price-row"><span class="chip">From</span><span class="money">R550</span></div>
-          </div>
-        </article>
-
-        <article class="price-card">
-          <img src="./images/boxbraids.jpg" alt="Box braids" loading="lazy">
-          <div class="price-body">
-            <h3>Box Braids</h3>
-            <p>Classic protective style</p>
-            <div class="price-row"><span class="chip">From</span><span class="money">R500</span></div>
-          </div>
-        </article>
-
-        <article class="price-card">
-          <img src="./images/fulani.jpg" alt="Fulani braids" loading="lazy">
-          <div class="price-body">
-            <h3>Fulani Braids</h3>
-            <p>Elegant detail • beads optional</p>
-            <div class="price-row"><span class="chip">From</span><span class="money">R450</span></div>
-          </div>
-        </article>
-
-        <article class="price-card">
-          <img src="./images/cornrows.jpg" alt="Cornrows" loading="lazy">
-          <div class="price-body">
-            <h3>Cornrows</h3>
-            <p>Neat scalp braiding</p>
-            <div class="price-row"><span class="chip">From</span><span class="money">R250</span></div>
-          </div>
-        </article>
-
-        <article class="price-card">
-          <img src="./images/stitch.jpg" alt="Stitch braids" loading="lazy">
-          <div class="price-body">
-            <h3>Stitch Braids</h3>
-            <p>Trendy stitch lines</p>
-            <div class="price-row"><span class="chip">From</span><span class="money">R300</span></div>
-          </div>
-        </article>
-
-        <article class="price-card">
-          <img src="./images/goddess.jpg" alt="Goddess braids" loading="lazy">
-          <div class="price-body">
-            <h3>Goddess Braids</h3>
-            <p>Curly luxury look</p>
-            <div class="price-row"><span class="chip">From</span><span class="money">R600</span></div>
-          </div>
-        </article>
+      <div class="price-box">
+        <div class="price-line"><span>Knotless Braids</span><b>From R550</b></div>
+        <div class="price-line"><span>Box Braids</span><b>From R500</b></div>
+        <div class="price-line"><span>Fulani Braids</span><b>From R450</b></div>
+        <div class="price-line"><span>Cornrows</span><b>From R250</b></div>
+        <div class="price-line"><span>Stitch Braids</span><b>From R300</b></div>
+        <div class="price-line"><span>Goddess Braids</span><b>From R600</b></div>
       </div>
 
       <div class="note">
-        Tip: Send your preferred style screenshot on WhatsApp for an exact quote.
+        WhatsApp us your preferred style screenshot + hair length + date/time for an exact quote.
       </div>
     </div>
   </section>
 
-  <!-- Gallery -->
-  <section class="section alt" id="gallery">
+  <!-- GALLERY -->
+  <section class="section section-alt" id="gallery">
     <div class="container">
       <div class="section-head">
         <h2>Gallery</h2>
-        <p>Tap a photo to view. Replace images in <b>/images/ig</b>.</p>
+        <p>Tap any photo to view bigger.</p>
       </div>
 
       <div class="ig-grid">
-        <button class="ig" data-full="./images/ig/1.jpg"><img src="./images/ig/1.jpg" alt="Style 1" loading="lazy"></button>
-        <button class="ig" data-full="./images/ig/2.jpg"><img src="./images/ig/2.jpg" alt="Style 2" loading="lazy"></button>
-        <button class="ig" data-full="./images/ig/3.jpg"><img src="./images/ig/3.jpg" alt="Style 3" loading="lazy"></button>
-        <button class="ig" data-full="./images/ig/4.jpg"><img src="./images/ig/4.jpg" alt="Style 4" loading="lazy"></button>
-        <button class="ig" data-full="./images/ig/5.jpg"><img src="./images/ig/5.jpg" alt="Style 5" loading="lazy"></button>
-        <button class="ig" data-full="./images/ig/6.jpg"><img src="./images/ig/6.jpg" alt="Style 6" loading="lazy"></button>
-        <button class="ig" data-full="./images/ig/7.jpg"><img src="./images/ig/7.jpg" alt="Style 7" loading="lazy"></button>
-        <button class="ig" data-full="./images/ig/8.jpg"><img src="./images/ig/8.jpg" alt="Style 8" loading="lazy"></button>
+        <button class="ig" data-full="./images/ig/1.jpg"><img src="./images/ig/1.jpg" alt="Gallery 1" loading="lazy"></button>
+        <button class="ig" data-full="./images/ig/2.jpg"><img src="./images/ig/2.jpg" alt="Gallery 2" loading="lazy"></button>
+        <button class="ig" data-full="./images/ig/3.jpg"><img src="./images/ig/3.jpg" alt="Gallery 3" loading="lazy"></button>
+        <button class="ig" data-full="./images/ig/4.jpg"><img src="./images/ig/4.jpg" alt="Gallery 4" loading="lazy"></button>
+        <button class="ig" data-full="./images/ig/5.jpg"><img src="./images/ig/5.jpg" alt="Gallery 5" loading="lazy"></button>
+        <button class="ig" data-full="./images/ig/6.jpg"><img src="./images/ig/6.jpg" alt="Gallery 6" loading="lazy"></button>
+        <button class="ig" data-full="./images/ig/7.jpg"><img src="./images/ig/7.jpg" alt="Gallery 7" loading="lazy"></button>
+        <button class="ig" data-full="./images/ig/8.jpg"><img src="./images/ig/8.jpg" alt="Gallery 8" loading="lazy"></button>
       </div>
     </div>
   </section>
 
-  <!-- Reviews -->
+  <!-- REVIEWS -->
   <section class="section" id="reviews">
     <div class="container">
       <div class="section-head">
-        <h2>Reviews</h2>
-        <p>What our clients say.</p>
+        <h2>Client Reviews</h2>
+        <p>Real feedback from happy clients.</p>
       </div>
 
       <div class="reviews">
-        <button class="rbtn" id="rPrev" aria-label="Previous review">‹</button>
+        <button class="rnav" id="rPrev" type="button" aria-label="Previous review">‹</button>
         <div class="review-card" id="reviewCard" aria-live="polite"></div>
-        <button class="rbtn" id="rNext" aria-label="Next review">›</button>
+        <button class="rnav" id="rNext" type="button" aria-label="Next review">›</button>
       </div>
 
       <div class="dots center" id="reviewDots" aria-label="Review dots"></div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section class="section alt" id="contact">
+  <!-- CONTACT -->
+  <section class="section section-alt" id="contact">
     <div class="container">
       <div class="section-head">
-        <h2>Book & Contact</h2>
-        <p>Fast booking via WhatsApp. Share your style + date/time.</p>
+        <h2>Book on WhatsApp</h2>
+        <p>Fast booking. Send your style screenshot + preferred date/time.</p>
       </div>
 
       <div class="contact-grid">
         <div class="contact-card">
           <h3>WhatsApp Booking</h3>
           <p>Tap below to message us instantly.</p>
-          <a class="btn primary" id="waBtn" href="#" target="_blank" rel="noopener">Book on WhatsApp</a>
-          <div class="small">Change the WhatsApp number inside <b>script.js</b>.</div>
+          <a class="btn btn-primary" id="waBtn" href="#" target="_blank" rel="noopener">Chat on WhatsApp</a>
+          <div class="small">Edit your WhatsApp number in <b>script.js</b>.</div>
         </div>
 
         <div class="contact-card">
@@ -328,32 +408,34 @@
 
         <div class="contact-card">
           <h3>Location</h3>
-          <p>Welverdiend(Next to Fast 11 Soccer Field)</p>
-          <a class="btn ghost" href="#home">Back to Top</a>
+          <p>Pretoria (update with your exact area)</p>
+          <a class="btn btn-ghost" href="#home">Back to Top</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-inner">
       <div>
-        <div class="footer-title">Mira’s Beauty</div>
-        <div class="footer-sub">Luxury salon styles • Braids • Beauty</div>
+        <div class="foot-title">Mira’s Beauty</div>
+        <div class="foot-sub">Salon • Braids • Nails • Beauty</div>
       </div>
-      <div class="footer-links">
+
+      <div class="foot-links">
         <a href="#prices">Prices</a>
         <a href="#gallery">Gallery</a>
         <a href="#contact">Book</a>
       </div>
-      <div class="footer-copy">© <span id="year"></span> Mira’s Beauty</div>
+
+      <div class="foot-copy">© <span id="year"></span> Mira’s Beauty</div>
     </div>
   </footer>
 
   <!-- Lightbox -->
   <div class="lightbox" id="lightbox" aria-hidden="true">
-    <button class="x" id="lightboxClose" aria-label="Close">✕</button>
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
     <img id="lightboxImg" alt="Preview" />
   </div>
 
