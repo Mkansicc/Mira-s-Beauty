@@ -1,0 +1,617 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mira’s Beauty Braids | Welverdiend</title>
+  <meta name="description" content="Mira’s Beauty Braids — Knotless, Goddess, Twist & Freehand. Affordable braiding in Welverdiend." />
+  <meta name="theme-color" content="#b54cff" />
+
+  <style>
+    :root{
+      --bg: #0b0b12;
+      --card: rgba(255,255,255,.08);
+      --card2: rgba(255,255,255,.12);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.70);
+      --line: rgba(255,255,255,.14);
+      --pink: #ff4fd8;
+      --violet: #b54cff;
+      --cyan: #37d6ff;
+      --ok: #18ff9a;
+      --shadow: 0 18px 60px rgba(0,0,0,.55);
+      --radius: 18px;
+      --radius2: 26px;
+      --max: 1100px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:var(--font);
+      color:var(--text);
+      background:
+        radial-gradient(1000px 600px at 10% 10%, rgba(181,76,255,.25), transparent 55%),
+        radial-gradient(900px 520px at 90% 15%, rgba(255,79,216,.18), transparent 55%),
+        radial-gradient(800px 520px at 50% 100%, rgba(55,214,255,.14), transparent 60%),
+        var(--bg);
+      overflow-x:hidden;
+    }
+
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 18px}
+
+    /* Top nav */
+    .nav{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(14px);
+      background: linear-gradient(to bottom, rgba(10,10,18,.85), rgba(10,10,18,.45));
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-inner{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+      gap:14px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px; min-width: 210px;
+    }
+    .logo{
+      width:38px; height:38px; border-radius:12px;
+      background: radial-gradient(circle at 30% 30%, var(--pink), var(--violet) 55%, rgba(255,255,255,.08));
+      box-shadow: 0 10px 30px rgba(181,76,255,.25);
+      border: 1px solid rgba(255,255,255,.18);
+    }
+    .brand h1{
+      font-size:14px; margin:0; letter-spacing:.2px;
+      line-height:1.1;
+    }
+    .brand small{display:block; color:var(--muted); font-weight:500; margin-top:3px}
+
+    .links{
+      display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end;
+    }
+    .links a{
+      padding:10px 12px; border-radius:999px;
+      color:var(--muted);
+      border:1px solid transparent;
+      transition:.2s ease;
+      font-weight:600;
+      font-size:13px;
+    }
+    .links a:hover{
+      color:var(--text);
+      border-color: var(--line);
+      background: rgba(255,255,255,.05);
+    }
+
+    .cta{
+      display:flex; gap:10px; align-items:center;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:10px;
+      padding:11px 14px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.06);
+      color:var(--text);
+      font-weight:800;
+      font-size:13px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+      transition:.2s ease;
+      cursor:pointer;
+      user-select:none;
+      white-space:nowrap;
+    }
+    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.09)}
+    .btn.primary{
+      border:none;
+      background: linear-gradient(135deg, var(--pink), var(--violet));
+      box-shadow: 0 16px 45px rgba(181,76,255,.35);
+    }
+    .btn.primary:hover{filter: brightness(1.05)}
+    .btn .dot{
+      width:9px; height:9px; border-radius:99px; background: var(--ok);
+      box-shadow:0 0 0 4px rgba(24,255,154,.12);
+    }
+
+    /* Hero */
+    .hero{
+      padding:44px 0 24px;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.05));
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+    .hero-card{
+      padding:26px 22px;
+      min-height: 320px;
+    }
+    .pill{
+      display:inline-flex; gap:8px; align-items:center;
+      padding:8px 12px;
+      border-radius:999px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.14);
+      color: var(--muted);
+      font-weight:700;
+      font-size:12px;
+      margin-bottom:14px;
+    }
+    .pill .spark{
+      width:18px; height:18px; border-radius:7px;
+      background: radial-gradient(circle at 30% 30%, var(--cyan), var(--violet));
+      box-shadow: 0 12px 30px rgba(55,214,255,.18);
+    }
+    .hero h2{
+      margin:0;
+      font-size: clamp(28px, 4vw, 44px);
+      letter-spacing:-.6px;
+      line-height:1.04;
+    }
+    .hero p{
+      margin:12px 0 0;
+      color: var(--muted);
+      line-height:1.55;
+      font-weight:600;
+      max-width: 54ch;
+    }
+    .hero-actions{
+      margin-top:18px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+    .mini{
+      margin-top:16px;
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      color: var(--muted);
+      font-weight:700;
+      font-size:13px;
+    }
+    .mini span{
+      display:inline-flex; gap:8px; align-items:center;
+      padding:9px 12px;
+      border-radius:999px;
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.10);
+    }
+    .mini i{
+      width:8px; height:8px; border-radius:99px;
+      background: linear-gradient(135deg, var(--pink), var(--violet));
+      display:inline-block;
+    }
+
+    /* Flyer/preview */
+    .flyer{
+      padding:14px;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+    .flyer .img{
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.04);
+      overflow:hidden;
+      position:relative;
+      min-height: 320px;
+      display:flex; align-items:center; justify-content:center;
+    }
+    .flyer img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      filter: saturate(1.05) contrast(1.05);
+    }
+    .flyer .note{
+      color: var(--muted);
+      font-weight:700;
+      font-size:13px;
+      line-height:1.4;
+      padding:0 4px 4px;
+    }
+
+    /* Sections */
+    section{padding:26px 0}
+    .section-title{
+      display:flex; align-items:flex-end; justify-content:space-between; gap:12px;
+      margin-bottom:14px;
+    }
+    .section-title h3{
+      margin:0;
+      font-size: 20px;
+      letter-spacing:-.2px;
+    }
+    .section-title p{
+      margin:0;
+      color: var(--muted);
+      font-weight:700;
+      font-size: 13px;
+    }
+
+    /* Pricing */
+    .grid{
+      display:grid;
+      gap:14px;
+      grid-template-columns: repeat(12, 1fr);
+    }
+    .col-6{grid-column: span 6}
+    .col-4{grid-column: span 4}
+    .col-12{grid-column: span 12}
+
+    .price-card{
+      padding:18px 16px;
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.05));
+      border: 1px solid rgba(255,255,255,.14);
+      box-shadow: 0 14px 40px rgba(0,0,0,.28);
+      position:relative;
+      overflow:hidden;
+    }
+    .price-card::after{
+      content:"";
+      position:absolute;
+      inset:-80px -60px auto auto;
+      width:180px; height:180px;
+      background: radial-gradient(circle at 30% 30%, rgba(255,79,216,.35), transparent 60%);
+      transform: rotate(15deg);
+      pointer-events:none;
+    }
+    .price-card h4{
+      margin:0 0 10px;
+      font-size: 16px;
+      letter-spacing:-.2px;
+    }
+    .rows{
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+      margin-top:10px;
+    }
+    .row{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      padding:10px 12px;
+      border-radius: 14px;
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.10);
+      font-weight:800;
+    }
+    .row span{color: var(--muted); font-weight:800}
+    .row b{font-size:14px}
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 10px;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:900;
+      color: rgba(255,255,255,.9);
+      background: rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.14);
+    }
+    .badge i{
+      width:8px; height:8px; border-radius:99px;
+      background: linear-gradient(135deg, var(--cyan), var(--violet));
+      display:inline-block;
+    }
+
+    /* Gallery */
+    .gallery{
+      display:grid;
+      gap:14px;
+      grid-template-columns: repeat(12, 1fr);
+    }
+    .shot{
+      grid-column: span 6;
+      border-radius: var(--radius);
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.04);
+      overflow:hidden;
+      box-shadow: 0 16px 50px rgba(0,0,0,.35);
+      position:relative;
+      min-height: 240px;
+    }
+    .shot img{width:100%; height:100%; object-fit:cover; display:block}
+    .shot .cap{
+      position:absolute; left:12px; bottom:12px;
+      padding:8px 10px;
+      border-radius:999px;
+      background: rgba(0,0,0,.45);
+      border: 1px solid rgba(255,255,255,.18);
+      font-weight:900;
+      font-size:12px;
+      backdrop-filter: blur(10px);
+    }
+
+    /* Contact */
+    .contact{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+    }
+    .contact .box{
+      padding:18px 16px;
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.05));
+      border:1px solid rgba(255,255,255,.14);
+      box-shadow: 0 16px 50px rgba(0,0,0,.25);
+    }
+    .contact h4{margin:0 0 10px}
+    .contact p{margin:0; color:var(--muted); font-weight:700; line-height:1.55}
+    .contact .actions{margin-top:12px; display:flex; gap:10px; flex-wrap:wrap}
+
+    /* Footer */
+    footer{
+      padding:22px 0 34px;
+      border-top:1px solid var(--line);
+      color: var(--muted);
+      font-weight:700;
+    }
+    .foot{
+      display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;
+      align-items:center;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px){
+      .hero-grid{grid-template-columns: 1fr}
+      .flyer .img{min-height: 280px}
+      .contact{grid-template-columns: 1fr}
+      .shot{grid-column: span 12}
+      .col-6{grid-column: span 12}
+      .col-4{grid-column: span 12}
+      .brand{min-width:auto}
+      .links{display:none}
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAV -->
+  <div class="nav">
+    <div class="wrap">
+      <div class="nav-inner">
+        <div class="brand">
+          <div class="logo" aria-hidden="true"></div>
+          <div>
+            <h1>Mira’s Beauty Braids</h1>
+            <small>Welverdiend • Affordable & Neat</small>
+          </div>
+        </div>
+
+        <div class="links" aria-label="Page links">
+          <a href="#prices">Prices</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div class="cta">
+          <a class="btn" href="#contact"><span class="dot"></span> Available</a>
+          <a class="btn primary" id="whatsBtnTop" href="#">Book on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="card hero-card">
+          <div class="pill"><span class="spark" aria-hidden="true"></span> Neat braids • Clean parts • Long-lasting</div>
+          <h2>Look fresh.<br/>Feel confident.<br/>Braids done right.</h2>
+          <p>
+            Knotless, Goddess, Twist & Freehand styles at friendly prices.
+            Send a message to book — and include your preferred style, length, and date.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn primary" id="whatsBtnHero" href="#">Book on WhatsApp</a>
+            <a class="btn" href="#prices">See Prices</a>
+          </div>
+
+          <div class="mini" aria-label="Highlights">
+            <span><i></i> Fast & neat</span>
+            <span><i></i> Good prices</span>
+            <span><i></i> Welverdiend</span>
+          </div>
+        </div>
+
+        <div class="card flyer">
+          <div class="img">
+            <!-- Put your flyer image in the same folder as index.html, named: flyer.png -->
+            <img src="flyer.png" alt="Mira’s Beauty Braids flyer" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=&quot;padding:18px;color:rgba(255,255,255,.75);font-weight:800;text-align:center&quot;>Add your flyer image as <b>flyer.png</b> in the repo.<br/><br/>Then refresh this page.</div>';">
+          </div>
+          <div class="note">
+            Tip: Add 6–10 hairstyle photos later for a stronger gallery (customers love visuals).
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- PRICES -->
+  <section id="prices">
+    <div class="wrap">
+      <div class="section-title">
+        <h3>Services & Prices</h3>
+        <p>Prices in ZAR (R)</p>
+      </div>
+
+      <div class="grid">
+        <div class="price-card col-6">
+          <span class="badge"><i></i> Knotless Braids</span>
+          <div class="rows">
+            <div class="row"><span>Normal</span><b>R200</b></div>
+            <div class="row"><span>Extended</span><b>R280</b></div>
+            <div class="row"><span>Jumbo</span><b>R150</b></div>
+            <div class="row"><span>Shorts</span><b>R180</b></div>
+          </div>
+        </div>
+
+        <div class="price-card col-6">
+          <span class="badge"><i></i> Goddess Braids</span>
+          <div class="rows">
+            <div class="row"><span>Normal</span><b>R260</b></div>
+            <div class="row"><span>Extended</span><b>R300</b></div>
+            <div class="row"><span>Shorts</span><b>R200</b></div>
+          </div>
+        </div>
+
+        <div class="price-card col-6">
+          <span class="badge"><i></i> Twist Braids</span>
+          <div class="rows">
+            <div class="row"><span>Normal</span><b>R200</b></div>
+            <div class="row"><span>Goddess</span><b>R280</b></div>
+          </div>
+        </div>
+
+        <div class="price-card col-6">
+          <span class="badge"><i></i> Freehand</span>
+          <div class="rows">
+            <div class="row"><span>Price Range</span><b>R80 – R100</b></div>
+          </div>
+        </div>
+
+        <div class="price-card col-12">
+          <h4>Booking note</h4>
+          <p style="margin:0;color:rgba(255,255,255,.75);font-weight:700;line-height:1.6">
+            When messaging, please include: <b>style</b>, <b>length</b>, <b>color</b> (if any), and your <b>preferred date/time</b>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <div class="wrap">
+      <div class="section-title">
+        <h3>Gallery</h3>
+        <p>Add more photos anytime</p>
+      </div>
+
+      <div class="gallery">
+        <div class="shot">
+          <img src="flyer.png" alt="Braids gallery preview" />
+          <div class="cap">Featured styles</div>
+        </div>
+
+        <div class="shot">
+          <!-- Replace this with your own photo later: gallery2.jpg -->
+          <img src="gallery2.jpg" alt="Add your hairstyle photo (gallery2.jpg)"
+               onerror="this.style.display='none'; this.parentElement.innerHTML += '<div style=&quot;position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:18px;text-align:center;color:rgba(255,255,255,.75);font-weight:900&quot;>Add a photo named <b>gallery2.jpg</b><br/>for a better gallery.</div>';" />
+          <div class="cap">Add your photo</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="section-title">
+        <h3>Contact & Location</h3>
+        <p>Fast reply on WhatsApp</p>
+      </div>
+
+      <div class="contact">
+        <div class="box">
+          <h4>Book now</h4>
+          <p>
+            <b>Phone/WhatsApp:</b> <span id="phoneText">072 066 4503</span><br/>
+            <b>Business:</b> Mira’s Beauty Braids
+          </p>
+          <div class="actions">
+            <a class="btn primary" id="whatsBtnContact" href="#">Message on WhatsApp</a>
+            <a class="btn" id="callBtn" href="#">Call</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <h4>Location</h4>
+          <p>
+            <b>Welverdiend</b> (Gangen<i>i</i> / nearby area)<br/>
+            Share your location on WhatsApp and we’ll confirm directions.
+          </p>
+          <div class="actions">
+            <a class="btn" id="mapsBtn" href="#" target="_blank" rel="noopener">Open Google Maps</a>
+            <a class="btn" href="#prices">View prices</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot">
+        <div>© <span id="year"></span> Mira’s Beauty Braids</div>
+        <div style="opacity:.9">Designed for GitHub Pages</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ====== EDIT THESE IF NEEDED ======
+    const PHONE = "0720664503"; // from your poster
+    const WHATSAPP_NUMBER = "27" + PHONE.replace(/^0/, ""); // SA format: 27 + number without leading 0
+    const BUSINESS_NAME = "Mira’s Beauty Braids";
+    const DEFAULT_MAP_QUERY = "Welverdiend"; // change to exact address if you want
+
+    // WhatsApp message template
+    const msg =
+      `Hi ${BUSINESS_NAME}! 👋%0A` +
+      `I want to book braids.%0A%0A` +
+      `Style: %0A` +
+      `Length: %0A` +
+      `Date/Time: %0A%0A` +
+      `Please confirm availability and total price. Thank you!`;
+
+    const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`;
+    const callLink = `tel:${PHONE}`;
+    const mapsLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(DEFAULT_MAP_QUERY)}`;
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Buttons
+    const ids = ["whatsBtnTop", "whatsBtnHero", "whatsBtnContact"];
+    ids.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.href = waLink;
+    });
+
+    const callBtn = document.getElementById("callBtn");
+    if (callBtn) callBtn.href = callLink;
+
+    const mapsBtn = document.getElementById("mapsBtn");
+    if (mapsBtn) mapsBtn.href = mapsLink;
+
+    // Replace phone text neatly
+    const phoneText = document.getElementById("phoneText");
+    if (phoneText) phoneText.textContent = PHONE.replace(/(\d{3})(\d{3})(\d{4})/, "$1 $2 $3");
+  </script>
+</body>
+</html>
