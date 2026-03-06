@@ -4,165 +4,213 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mira's Beauty Braids</title>
+  <meta name="description" content="Mira's Beauty Braids - beautiful braids, neat styles, affordable prices." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="hero" id="home">
-    <nav class="nav">
-      <div class="logo">Mira’s Beauty Braids</div>
-      <ul class="nav-links">
-        <li><a href="#styles">Styles</a></li>
-        <li><a href="#prices">Prices</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+  <header class="topbar">
+    <div class="container nav">
+      <a href="#home" class="brand">Mira's Beauty Braids</a>
 
-    <div class="hero-content">
-      <div class="hero-text">
-        <p class="small-tag">Beautiful. Neat. Affordable.</p>
-        <h1>Eye-catching braids for every style</h1>
-        <p>
-          Welcome to Mira’s Beauty Braids in Welverdiend, Cangeni.
-          We do neat, stylish, and affordable braids for all ages.
-        </p>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
 
-        <div class="hero-buttons">
-          <a class="btn primary" href="https://wa.me/27720654503" target="_blank">Book on WhatsApp</a>
-          <a class="btn secondary" href="#prices">View Prices</a>
-        </div>
-      </div>
-
-      <div class="hero-image-card">
-        <img src="images/poster.jpg" alt="Mira's Beauty Braids poster" />
-      </div>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#styles">Styles</a></li>
+          <li><a href="#prices">Prices</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-  <section class="section intro">
-    <div class="intro-card">
-      <h2>Why choose us?</h2>
-      <div class="features">
-        <div class="feature">
-          <h3>Neat Work</h3>
-          <p>Clean lines, beautiful finishing, and long-lasting styles.</p>
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <div class="hero-text">
+        <span class="tag">BEAUTY • BRAIDS • STYLE</span>
+        <h1>Mira's Beauty Braids</h1>
+        <p>
+          Beautiful, neat and affordable braids in Welverdiend, Cangeni.
+          Book your next hairstyle with us on WhatsApp.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="https://wa.me/27720654503" target="_blank" class="btn btn-primary">Book on WhatsApp</a>
+          <a href="#prices" class="btn btn-outline">See Prices</a>
         </div>
-        <div class="feature">
-          <h3>Affordable Prices</h3>
-          <p>Good quality styles at prices that are budget friendly.</p>
-        </div>
-        <div class="feature">
-          <h3>Friendly Service</h3>
-          <p>A welcoming place where you leave looking and feeling good.</p>
-        </div>
+      </div>
+
+      <div class="hero-card">
+        <img src="images/poster.jpg" alt="Mira's Beauty Braids poster" />
       </div>
     </div>
   </section>
 
-  <section class="section" id="styles">
-    <h2 class="section-title">Our Popular Styles</h2>
-    <div class="styles-grid">
-      <div class="style-card">
-        <img src="images/knotless.jpg" alt="Knotless braids" />
-        <div class="style-info">
-          <h3>Knotless Braids</h3>
-          <p>Elegant, lightweight, and comfortable everyday style.</p>
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Welcome to Mira's Beauty</h2>
+          <p>Your trusted place for stylish braids and neat finishing.</p>
+        </div>
+
+        <div class="info-grid">
+          <div class="info-card">
+            <h3>Neat Work</h3>
+            <p>Clean lines, beautiful parts, and long-lasting styles.</p>
+          </div>
+          <div class="info-card">
+            <h3>Affordable Prices</h3>
+            <p>Good styles at prices that are fair and friendly.</p>
+          </div>
+          <div class="info-card">
+            <h3>Fast Booking</h3>
+            <p>Easy WhatsApp booking with quick response.</p>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="style-card">
-        <img src="images/goddess.jpg" alt="Goddess braids" />
-        <div class="style-info">
-          <h3>Goddess Braids</h3>
-          <p>Soft, stylish, and perfect for a trendy look.</p>
+    <section class="section alt" id="styles">
+      <div class="container">
+        <div class="section-head">
+          <h2>Popular Styles</h2>
+          <p>Choose your favorite braid style.</p>
+        </div>
+
+        <div class="card-grid">
+          <article class="card">
+            <div class="card-image">
+              <img src="images/knotless.jpg" alt="Knotless braids" />
+            </div>
+            <div class="card-body">
+              <h3>Knotless Braids</h3>
+              <p>Lightweight, neat and beautiful for everyday style.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-image">
+              <img src="images/goddess.jpg" alt="Goddess braids" />
+            </div>
+            <div class="card-body">
+              <h3>Goddess Braids</h3>
+              <p>Elegant and trendy with a soft stylish finish.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-image">
+              <img src="images/twist.jpg" alt="Twist braids" />
+            </div>
+            <div class="card-body">
+              <h3>Twist Braids</h3>
+              <p>Clean twists with a fashionable look.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-image">
+              <img src="images/freehand.jpg" alt="Freehand braids" />
+            </div>
+            <div class="card-body">
+              <h3>Freehand</h3>
+              <p>Simple, neat and affordable braid option.</p>
+            </div>
+          </article>
         </div>
       </div>
+    </section>
 
-      <div class="style-card">
-        <img src="images/twist.jpg" alt="Twist braids" />
-        <div class="style-info">
-          <h3>Twist Braids</h3>
-          <p>Beautiful twist styles with a neat finish.</p>
+    <section class="section" id="prices">
+      <div class="container">
+        <div class="section-head">
+          <h2>Price List</h2>
+          <p>Simple and clear pricing.</p>
+        </div>
+
+        <div class="price-grid">
+          <div class="price-card">
+            <div class="price-title">Knotless Braids</div>
+            <ul>
+              <li><span>Normal</span><strong>R200</strong></li>
+              <li><span>Extended</span><strong>R280</strong></li>
+              <li><span>Jumbo</span><strong>R150</strong></li>
+              <li><span>Shorts</span><strong>R180</strong></li>
+            </ul>
+          </div>
+
+          <div class="price-card">
+            <div class="price-title">Goddess Braids</div>
+            <ul>
+              <li><span>Normal</span><strong>R260</strong></li>
+              <li><span>Extended</span><strong>R300</strong></li>
+              <li><span>Shorts</span><strong>R200</strong></li>
+            </ul>
+          </div>
+
+          <div class="price-card">
+            <div class="price-title">Twist Braids</div>
+            <ul>
+              <li><span>Normal</span><strong>R200</strong></li>
+              <li><span>Goddess</span><strong>R280</strong></li>
+            </ul>
+          </div>
+
+          <div class="price-card">
+            <div class="price-title">Freehand</div>
+            <ul>
+              <li><span>Price Range</span><strong>R80-R100</strong></li>
+            </ul>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="style-card">
-        <img src="images/freehand.jpg" alt="Freehand braids" />
-        <div class="style-info">
-          <h3>Freehand</h3>
-          <p>Simple and affordable styles for a clean fresh look.</p>
+    <section class="section alt" id="gallery">
+      <div class="container">
+        <div class="section-head">
+          <h2>Gallery</h2>
+          <p>Some of our beautiful braid styles.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <img src="images/knotless.jpg" alt="Knotless style" />
+          <img src="images/goddess.jpg" alt="Goddess style" />
+          <img src="images/twist.jpg" alt="Twist style" />
+          <img src="images/freehand.jpg" alt="Freehand style" />
+          <img src="images/style5.jpg" alt="Braids style 5" />
+          <img src="images/style6.jpg" alt="Braids style 6" />
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section" id="prices">
-    <h2 class="section-title">Price List</h2>
-    <div class="price-wrapper">
-      <div class="price-card">
-        <h3>Knotless Braids</h3>
-        <ul>
-          <li>Normal — R200</li>
-          <li>Extended — R280</li>
-          <li>Jumbo — R150</li>
-          <li>Shorts — R180</li>
-        </ul>
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="contact-box">
+          <h2>Book Your Style Today</h2>
+          <p><strong>Location:</strong> Welverdiend, Cangeni</p>
+          <p><strong>WhatsApp:</strong> 072 065 4503</p>
+          <div class="contact-buttons">
+            <a href="https://wa.me/27720654503" target="_blank" class="btn btn-primary">Chat on WhatsApp</a>
+            <a href="#gallery" class="btn btn-outline light">View Gallery</a>
+          </div>
+        </div>
       </div>
-
-      <div class="price-card">
-        <h3>Goddess Braids</h3>
-        <ul>
-          <li>Normal — R260</li>
-          <li>Extended — R300</li>
-          <li>Shorts — R200</li>
-        </ul>
-      </div>
-
-      <div class="price-card">
-        <h3>Twist Braids</h3>
-        <ul>
-          <li>Normal — R200</li>
-          <li>Goddess — R280</li>
-        </ul>
-      </div>
-
-      <div class="price-card">
-        <h3>Freehand</h3>
-        <ul>
-          <li>R80 — R100</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="gallery">
-    <h2 class="section-title">Gallery</h2>
-    <div class="gallery-grid">
-      <img src="images/knotless.jpg" alt="Knotless style" />
-      <img src="images/goddess.jpg" alt="Goddess style" />
-      <img src="images/twist.jpg" alt="Twist style" />
-      <img src="images/freehand.jpg" alt="Freehand style" />
-      <img src="images/style5.jpg" alt="Braids style 5" />
-      <img src="images/style6.jpg" alt="Braids style 6" />
-    </div>
-  </section>
-
-  <section class="section contact-section" id="contact">
-    <div class="contact-card">
-      <h2>Book Your Appointment</h2>
-      <p>Location: Welverdiend, Cangeni</p>
-      <p>WhatsApp: <a href="https://wa.me/27720654503" target="_blank">072 065 4503</a></p>
-      <a class="btn primary" href="https://wa.me/27720654503" target="_blank">Chat on WhatsApp</a>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <footer class="footer">
-    <p>© 2026 Mira’s Beauty Braids. All rights reserved.</p>
+    <div class="container footer-wrap">
+      <p>© 2026 Mira's Beauty Braids</p>
+      <p>Designed for GitHub Pages</p>
+    </div>
   </footer>
 
-  <a href="https://wa.me/27720654503" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
-    WhatsApp
-  </a>
+  <a class="whatsapp-float" href="https://wa.me/27720654503" target="_blank">WhatsApp</a>
 
   <script src="script.js"></script>
 </body>
