@@ -1,450 +1,169 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mira’s Beauty | Salon • Braids • Nails • Beauty</title>
-  <meta name="description" content="Mira’s Beauty – Professional salon styles. Braids, nails and beauty. Book via WhatsApp. View prices & gallery." />
-  <link rel="stylesheet" href="./style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mira's Beauty Braids</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <!-- TOP PROMO STRIP (like a store banner, but for salon promos) -->
-  <div class="topbar" role="banner">
-    <div class="container topbar-inner">
-      <div class="topbar-left">
-        <span class="sparkle">✨</span>
-        <span><b>Special:</b> 10% off first booking (T&Cs apply)</span>
-        <span class="sep">•</span>
-        <span><b>Open:</b> Mon–Sat</span>
-      </div>
-      <div class="topbar-right">
-        <a class="topbar-link" href="#prices">View Prices</a>
-        <span class="sep">•</span>
-        <a class="topbar-link" href="#contact">Book Now</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- HEADER -->
-  <header class="header" id="home">
-    <div class="container header-inner">
-      <a class="brand" href="#home" aria-label="Mira's Beauty Home">
-        <div class="brand-mark">MB</div>
-        <div class="brand-text">
-          <div class="brand-name">Mira’s Beauty</div>
-          <div class="brand-sub">Salon • Braids • Nails • Beauty</div>
-        </div>
-      </a>
-
-      <!-- Desktop search -->
-      <div class="searchbox" role="search" aria-label="Search styles">
-        <span class="search-ico">⌕</span>
-        <input id="searchInput" type="search" placeholder="Search styles: knotless, box braids, cornrows..." />
-      </div>
-
-      <button class="menu-btn" id="menuBtn" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
-
-      <nav class="nav" id="nav">
-        <a href="#categories">Categories</a>
-        <a href="#featured">Featured</a>
-        <a href="#prices">Prices</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#reviews">Reviews</a>
-        <a class="nav-cta" href="#contact">WhatsApp Booking</a>
-      </nav>
-    </div>
-
-    <!-- Mobile nav -->
-    <nav class="mobile-nav" id="mobileNav">
-      <a href="#categories">Categories</a>
-      <a href="#featured">Featured</a>
-      <a href="#prices">Prices</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#contact">WhatsApp Booking</a>
+  <header class="hero" id="home">
+    <nav class="nav">
+      <div class="logo">Mira’s Beauty Braids</div>
+      <ul class="nav-links">
+        <li><a href="#styles">Styles</a></li>
+        <li><a href="#prices">Prices</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
-  </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-bg"></div>
-
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <div class="hero-pill">
-          <span class="pill-dot"></span>
-          Premium salon finishing • Neat parts • Clean look
-        </div>
-
-        <h1>Beautiful hair. Luxury finishing.</h1>
-        <p class="hero-sub">
-          Book quickly on WhatsApp, choose a style from the gallery, and get a clean professional result.
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="small-tag">Beautiful. Neat. Affordable.</p>
+        <h1>Eye-catching braids for every style</h1>
+        <p>
+          Welcome to Mira’s Beauty Braids in Welverdiend, Cangeni.
+          We do neat, stylish, and affordable braids for all ages.
         </p>
 
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#contact">Book on WhatsApp</a>
-          <a class="btn btn-ghost" href="#prices">See Prices</a>
-        </div>
-
-        <div class="hero-metrics">
-          <div class="metric">
-            <div class="metric-big">⭐ 4.9</div>
-            <div class="metric-small">Client rating</div>
-          </div>
-          <div class="metric">
-            <div class="metric-big">⏱️ Fast</div>
-            <div class="metric-small">Neat & professional</div>
-          </div>
-          <div class="metric">
-            <div class="metric-big">💎 Clean</div>
-            <div class="metric-small">Hygiene first</div>
-          </div>
+        <div class="hero-buttons">
+          <a class="btn primary" href="https://wa.me/27720654503" target="_blank">Book on WhatsApp</a>
+          <a class="btn secondary" href="#prices">View Prices</a>
         </div>
       </div>
 
-      <!-- Hero slideshow (store-like banner look) -->
-      <div class="hero-media" aria-label="Hero slideshow">
-        <div class="slideshow" id="slideshow">
-          <div class="hs-slide is-active">
-            <img src="./images/hero1.jpg" alt="Mira’s Beauty style 1" loading="eager" />
-            <div class="hs-caption">
-              <div class="hs-title">Knotless Braids</div>
-              <div class="hs-sub">Natural finish • clean parts</div>
-            </div>
-          </div>
+      <div class="hero-image-card">
+        <img src="images/poster.jpg" alt="Mira's Beauty Braids poster" />
+      </div>
+    </div>
+  </header>
 
-          <div class="hs-slide">
-            <img src="./images/hero2.jpg" alt="Mira’s Beauty style 2" loading="lazy" />
-            <div class="hs-caption">
-              <div class="hs-title">Box Braids</div>
-              <div class="hs-sub">Classic look • long lasting</div>
-            </div>
-          </div>
-
-          <div class="hs-slide">
-            <img src="./images/hero3.jpg" alt="Mira’s Beauty style 3" loading="lazy" />
-            <div class="hs-caption">
-              <div class="hs-title">Fulani Braids</div>
-              <div class="hs-sub">Elegant detail • beads optional</div>
-            </div>
-          </div>
-
-          <button class="hs-nav hs-prev" id="hsPrev" aria-label="Previous slide">‹</button>
-          <button class="hs-nav hs-next" id="hsNext" aria-label="Next slide">›</button>
-          <div class="hs-dots" id="hsDots" aria-label="Slideshow dots"></div>
+  <section class="section intro">
+    <div class="intro-card">
+      <h2>Why choose us?</h2>
+      <div class="features">
+        <div class="feature">
+          <h3>Neat Work</h3>
+          <p>Clean lines, beautiful finishing, and long-lasting styles.</p>
         </div>
-
-        <div class="hero-strip">
-          <div class="strip-item"><b>Location:</b> Pretoria</div>
-          <div class="strip-item"><b>Booking:</b> WhatsApp</div>
-          <div class="strip-item"><b>Payment:</b> Cash / EFT</div>
+        <div class="feature">
+          <h3>Affordable Prices</h3>
+          <p>Good quality styles at prices that are budget friendly.</p>
+        </div>
+        <div class="feature">
+          <h3>Friendly Service</h3>
+          <p>A welcoming place where you leave looking and feeling good.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CATEGORIES (like ecommerce tiles) -->
-  <section class="section" id="categories">
-    <div class="container">
-      <div class="section-head">
-        <h2>Categories</h2>
-        <p>Browse like a store — choose what you want, then book.</p>
-      </div>
-
-      <div class="cat-grid">
-        <a class="cat" href="#prices" data-filter="braids">
-          <div class="cat-emoji">💇🏽‍♀️</div>
-          <div class="cat-title">Braids</div>
-          <div class="cat-sub">Knotless • Box • Fulani • Cornrows</div>
-        </a>
-
-        <a class="cat" href="#prices" data-filter="nails">
-          <div class="cat-emoji">💅</div>
-          <div class="cat-title">Nails</div>
-          <div class="cat-sub">Gel • Tips • Simple designs</div>
-        </a>
-
-        <a class="cat" href="#prices" data-filter="beauty">
-          <div class="cat-emoji">✨</div>
-          <div class="cat-title">Beauty</div>
-          <div class="cat-sub">Finishing • Edges • Styling</div>
-        </a>
-
-        <a class="cat" href="#gallery">
-          <div class="cat-emoji">🖼️</div>
-          <div class="cat-title">Gallery</div>
-          <div class="cat-sub">Tap photos to preview</div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FEATURED (store-like product grid) -->
-  <section class="section section-alt" id="featured">
-    <div class="container">
-      <div class="section-head">
-        <h2>Featured Styles</h2>
-        <p>Popular picks (you can edit names and prices anytime).</p>
-      </div>
-
-      <div class="toolbar">
-        <div class="tabs" role="tablist" aria-label="Style filters">
-          <button class="tab is-active" data-tab="all" type="button">All</button>
-          <button class="tab" data-tab="braids" type="button">Braids</button>
-          <button class="tab" data-tab="nails" type="button">Nails</button>
-          <button class="tab" data-tab="beauty" type="button">Beauty</button>
+  <section class="section" id="styles">
+    <h2 class="section-title">Our Popular Styles</h2>
+    <div class="styles-grid">
+      <div class="style-card">
+        <img src="images/knotless.jpg" alt="Knotless braids" />
+        <div class="style-info">
+          <h3>Knotless Braids</h3>
+          <p>Elegant, lightweight, and comfortable everyday style.</p>
         </div>
-
-        <div class="mini-note">Tip: Use the search box on top to filter quickly.</div>
       </div>
 
-      <div class="cards" id="cards">
-        <!-- Braids -->
-        <article class="cardx" data-cat="braids" data-name="knotless braids">
-          <img src="./images/knotless.jpg" alt="Knotless braids" loading="lazy" />
-          <div class="cardx-body">
-            <div class="cardx-top">
-              <h3>Knotless Braids</h3>
-              <span class="badge">Popular</span>
-            </div>
-            <p>Natural look • clean finish</p>
-            <div class="cardx-row">
-              <span class="from">From</span>
-              <span class="price">R550</span>
-            </div>
-          </div>
-        </article>
+      <div class="style-card">
+        <img src="images/goddess.jpg" alt="Goddess braids" />
+        <div class="style-info">
+          <h3>Goddess Braids</h3>
+          <p>Soft, stylish, and perfect for a trendy look.</p>
+        </div>
+      </div>
 
-        <article class="cardx" data-cat="braids" data-name="box braids">
-          <img src="./images/boxbraids.jpg" alt="Box braids" loading="lazy" />
-          <div class="cardx-body">
-            <div class="cardx-top">
-              <h3>Box Braids</h3>
-              <span class="badge soft">Classic</span>
-            </div>
-            <p>Protective style • neat parts</p>
-            <div class="cardx-row">
-              <span class="from">From</span>
-              <span class="price">R500</span>
-            </div>
-          </div>
-        </article>
+      <div class="style-card">
+        <img src="images/twist.jpg" alt="Twist braids" />
+        <div class="style-info">
+          <h3>Twist Braids</h3>
+          <p>Beautiful twist styles with a neat finish.</p>
+        </div>
+      </div>
 
-        <article class="cardx" data-cat="braids" data-name="fulani braids">
-          <img src="./images/fulani.jpg" alt="Fulani braids" loading="lazy" />
-          <div class="cardx-body">
-            <div class="cardx-top">
-              <h3>Fulani Braids</h3>
-              <span class="badge soft">Elegant</span>
-            </div>
-            <p>Detail look • beads optional</p>
-            <div class="cardx-row">
-              <span class="from">From</span>
-              <span class="price">R450</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="cardx" data-cat="braids" data-name="cornrows">
-          <img src="./images/cornrows.jpg" alt="Cornrows" loading="lazy" />
-          <div class="cardx-body">
-            <div class="cardx-top">
-              <h3>Cornrows</h3>
-              <span class="badge soft">Neat</span>
-            </div>
-            <p>Scalp braiding • clean lines</p>
-            <div class="cardx-row">
-              <span class="from">From</span>
-              <span class="price">R250</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="cardx" data-cat="braids" data-name="stitch braids">
-          <img src="./images/stitch.jpg" alt="Stitch braids" loading="lazy" />
-          <div class="cardx-body">
-            <div class="cardx-top">
-              <h3>Stitch Braids</h3>
-              <span class="badge soft">Trendy</span>
-            </div>
-            <p>Stitch lines • stylish look</p>
-            <div class="cardx-row">
-              <span class="from">From</span>
-              <span class="price">R300</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="cardx" data-cat="braids" data-name="goddess braids">
-          <img src="./images/goddess.jpg" alt="Goddess braids" loading="lazy" />
-          <div class="cardx-body">
-            <div class="cardx-top">
-              <h3>Goddess Braids</h3>
-              <span class="badge">Luxury</span>
-            </div>
-            <p>Curly finish • premium look</p>
-            <div class="cardx-row">
-              <span class="from">From</span>
-              <span class="price">R600</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Nails (placeholders — replace with your nail images later) -->
-        <article class="cardx" data-cat="nails" data-name="gel nails">
-          <div class="img-placeholder">
-            <div class="ph">💅</div>
-          </div>
-          <div class="cardx-body">
-            <div class="cardx-top"><h3>Gel Nails</h3><span class="badge soft">Nails</span></div>
-            <p>Neat finish • glossy look</p>
-            <div class="cardx-row"><span class="from">From</span><span class="price">R180</span></div>
-          </div>
-        </article>
-
-        <article class="cardx" data-cat="beauty" data-name="edges styling">
-          <div class="img-placeholder">
-            <div class="ph">✨</div>
-          </div>
-          <div class="cardx-body">
-            <div class="cardx-top"><h3>Edges & Finishing</h3><span class="badge soft">Beauty</span></div>
-            <p>Clean look • perfect finish</p>
-            <div class="cardx-row"><span class="from">From</span><span class="price">R50</span></div>
-          </div>
-        </article>
+      <div class="style-card">
+        <img src="images/freehand.jpg" alt="Freehand braids" />
+        <div class="style-info">
+          <h3>Freehand</h3>
+          <p>Simple and affordable styles for a clean fresh look.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- PRICES (simple list + note) -->
   <section class="section" id="prices">
-    <div class="container">
-      <div class="section-head">
-        <h2>Prices</h2>
-        <p>Prices may change depending on length/size/hair. Confirm final quote on WhatsApp.</p>
+    <h2 class="section-title">Price List</h2>
+    <div class="price-wrapper">
+      <div class="price-card">
+        <h3>Knotless Braids</h3>
+        <ul>
+          <li>Normal — R200</li>
+          <li>Extended — R280</li>
+          <li>Jumbo — R150</li>
+          <li>Shorts — R180</li>
+        </ul>
       </div>
 
-      <div class="price-box">
-        <div class="price-line"><span>Knotless Braids</span><b>From R550</b></div>
-        <div class="price-line"><span>Box Braids</span><b>From R500</b></div>
-        <div class="price-line"><span>Fulani Braids</span><b>From R450</b></div>
-        <div class="price-line"><span>Cornrows</span><b>From R250</b></div>
-        <div class="price-line"><span>Stitch Braids</span><b>From R300</b></div>
-        <div class="price-line"><span>Goddess Braids</span><b>From R600</b></div>
+      <div class="price-card">
+        <h3>Goddess Braids</h3>
+        <ul>
+          <li>Normal — R260</li>
+          <li>Extended — R300</li>
+          <li>Shorts — R200</li>
+        </ul>
       </div>
 
-      <div class="note">
-        WhatsApp us your preferred style screenshot + hair length + date/time for an exact quote.
-      </div>
-    </div>
-  </section>
-
-  <!-- GALLERY -->
-  <section class="section section-alt" id="gallery">
-    <div class="container">
-      <div class="section-head">
-        <h2>Gallery</h2>
-        <p>Tap any photo to view bigger.</p>
+      <div class="price-card">
+        <h3>Twist Braids</h3>
+        <ul>
+          <li>Normal — R200</li>
+          <li>Goddess — R280</li>
+        </ul>
       </div>
 
-      <div class="ig-grid">
-        <button class="ig" data-full="./images/ig/1.jpg"><img src="./images/ig/1.jpg" alt="Gallery 1" loading="lazy"></button>
-        <button class="ig" data-full="./images/ig/2.jpg"><img src="./images/ig/2.jpg" alt="Gallery 2" loading="lazy"></button>
-        <button class="ig" data-full="./images/ig/3.jpg"><img src="./images/ig/3.jpg" alt="Gallery 3" loading="lazy"></button>
-        <button class="ig" data-full="./images/ig/4.jpg"><img src="./images/ig/4.jpg" alt="Gallery 4" loading="lazy"></button>
-        <button class="ig" data-full="./images/ig/5.jpg"><img src="./images/ig/5.jpg" alt="Gallery 5" loading="lazy"></button>
-        <button class="ig" data-full="./images/ig/6.jpg"><img src="./images/ig/6.jpg" alt="Gallery 6" loading="lazy"></button>
-        <button class="ig" data-full="./images/ig/7.jpg"><img src="./images/ig/7.jpg" alt="Gallery 7" loading="lazy"></button>
-        <button class="ig" data-full="./images/ig/8.jpg"><img src="./images/ig/8.jpg" alt="Gallery 8" loading="lazy"></button>
+      <div class="price-card">
+        <h3>Freehand</h3>
+        <ul>
+          <li>R80 — R100</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- REVIEWS -->
-  <section class="section" id="reviews">
-    <div class="container">
-      <div class="section-head">
-        <h2>Client Reviews</h2>
-        <p>Real feedback from happy clients.</p>
-      </div>
-
-      <div class="reviews">
-        <button class="rnav" id="rPrev" type="button" aria-label="Previous review">‹</button>
-        <div class="review-card" id="reviewCard" aria-live="polite"></div>
-        <button class="rnav" id="rNext" type="button" aria-label="Next review">›</button>
-      </div>
-
-      <div class="dots center" id="reviewDots" aria-label="Review dots"></div>
+  <section class="section" id="gallery">
+    <h2 class="section-title">Gallery</h2>
+    <div class="gallery-grid">
+      <img src="images/knotless.jpg" alt="Knotless style" />
+      <img src="images/goddess.jpg" alt="Goddess style" />
+      <img src="images/twist.jpg" alt="Twist style" />
+      <img src="images/freehand.jpg" alt="Freehand style" />
+      <img src="images/style5.jpg" alt="Braids style 5" />
+      <img src="images/style6.jpg" alt="Braids style 6" />
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section class="section section-alt" id="contact">
-    <div class="container">
-      <div class="section-head">
-        <h2>Book on WhatsApp</h2>
-        <p>Fast booking. Send your style screenshot + preferred date/time.</p>
-      </div>
-
-      <div class="contact-grid">
-        <div class="contact-card">
-          <h3>WhatsApp Booking</h3>
-          <p>Tap below to message us instantly.</p>
-          <a class="btn btn-primary" id="waBtn" href="#" target="_blank" rel="noopener">Chat on WhatsApp</a>
-          <div class="small">Edit your WhatsApp number in <b>script.js</b>.</div>
-        </div>
-
-        <div class="contact-card">
-          <h3>Working Hours</h3>
-          <ul>
-            <li><b>Mon–Fri:</b> 09:00 – 18:00</li>
-            <li><b>Sat:</b> 09:00 – 17:00</li>
-            <li><b>Sun:</b> By appointment</li>
-          </ul>
-        </div>
-
-        <div class="contact-card">
-          <h3>Location</h3>
-          <p>Pretoria (update with your exact area)</p>
-          <a class="btn btn-ghost" href="#home">Back to Top</a>
-        </div>
-      </div>
+  <section class="section contact-section" id="contact">
+    <div class="contact-card">
+      <h2>Book Your Appointment</h2>
+      <p>Location: Welverdiend, Cangeni</p>
+      <p>WhatsApp: <a href="https://wa.me/27720654503" target="_blank">072 065 4503</a></p>
+      <a class="btn primary" href="https://wa.me/27720654503" target="_blank">Chat on WhatsApp</a>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer class="footer">
-    <div class="container footer-inner">
-      <div>
-        <div class="foot-title">Mira’s Beauty</div>
-        <div class="foot-sub">Salon • Braids • Nails • Beauty</div>
-      </div>
-
-      <div class="foot-links">
-        <a href="#prices">Prices</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Book</a>
-      </div>
-
-      <div class="foot-copy">© <span id="year"></span> Mira’s Beauty</div>
-    </div>
+    <p>© 2026 Mira’s Beauty Braids. All rights reserved.</p>
   </footer>
 
-  <!-- Lightbox -->
-  <div class="lightbox" id="lightbox" aria-hidden="true">
-    <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
-    <img id="lightboxImg" alt="Preview" />
-  </div>
-
-  <!-- Floating WhatsApp -->
-  <a class="wa-float" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="WhatsApp booking">
-    <span class="wa-bubble">💬</span>
-    <span class="wa-label">WhatsApp</span>
+  <a href="https://wa.me/27720654503" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+    WhatsApp
   </a>
 
-  <script src="./script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
