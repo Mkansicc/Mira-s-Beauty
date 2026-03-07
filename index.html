@@ -4,43 +4,60 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mira's Beauty Braids</title>
-  <meta name="description" content="Mira's Beauty Braids - beautiful, neat and affordable braids." />
+  <meta name="description" content="Mira's Beauty Braids - stylish, neat and affordable braids in Welverdiend." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- HEADER -->
   <header class="site-header">
-    <div class="container nav">
-      <a href="#home" class="logo">Mira's Beauty Braids</a>
+    <div class="container nav-wrap">
+      <a href="#home" class="brand">Mira's Beauty Braids</a>
 
       <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
 
-      <nav>
+      <nav class="nav">
         <ul class="nav-links" id="navLinks">
           <li><a href="#styles">Styles</a></li>
-          <li><a href="#prices">Prices</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#packages">Packages</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#book">Book</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-
-      <div class="nav-actions">
-        <button id="themeToggle" class="theme-btn">Theme</button>
-      </div>
     </div>
   </header>
 
+  <!-- HERO -->
   <section class="hero" id="home">
+    <div class="hero-overlay"></div>
     <div class="container hero-grid">
       <div class="hero-text">
-        <p class="eyebrow">Beautiful • Neat • Affordable</p>
-        <h1>Beautiful braid styles that make you stand out.</h1>
-        <p class="hero-lead">
-          Built for style lovers — neat braids, beautiful finishing, and one easy
-          WhatsApp link to book your next hairstyle.
+        <span class="hero-badge">✨ Neat • Stylish • Affordable</span>
+        <h1>Beautiful Braids That Make You Stand Out</h1>
+        <p>
+          We create neat, fashionable and affordable braid styles for ladies and girls.
+          Book your style today and enjoy a clean, professional finish.
         </p>
 
-        <div class="hero-buttons">
-          <a href="#prices" class="btn btn-primary">View Prices</a>
-          <a href="https://wa.me/27720654503" target="_blank" class="btn btn-outline">WhatsApp</a>
+        <div class="hero-actions">
+          <a href="#pricing" class="btn btn-primary">View Packages</a>
+          <a href="https://wa.me/27720654503" target="_blank" class="btn btn-outline">WhatsApp Now</a>
+        </div>
+
+        <div class="hero-points">
+          <div class="point">
+            <strong>Fast Booking</strong>
+            <span>Quick WhatsApp replies</span>
+          </div>
+          <div class="point">
+            <strong>Affordable</strong>
+            <span>Beautiful styles at good prices</span>
+          </div>
+          <div class="point">
+            <strong>Trusted</strong>
+            <span>Local braid service in Welverdiend</span>
+          </div>
         </div>
       </div>
 
@@ -50,159 +67,283 @@
     </div>
   </section>
 
-  <section class="features section">
+  <!-- QUICK BOOK -->
+  <section class="quick-contact">
     <div class="container">
-      <div class="feature-grid">
-        <article class="feature-card">
-          <h3>Clean styles</h3>
-          <p>Knotless, twist, goddess and freehand styles that are neat and beautiful.</p>
-        </article>
+      <div class="section-title">
+        <h2>Quick Booking</h2>
+        <p>Reach us fast on WhatsApp and book your braid style.</p>
+      </div>
 
-        <article class="feature-card">
-          <h3>Beautiful theme</h3>
-          <p>Simple premium look with dark and light theme toggle.</p>
-        </article>
+      <div class="quick-card">
+        <div class="quick-info">
+          <h3>Mira's Beauty Braids</h3>
+          <p><strong>WhatsApp:</strong> 072 065 4503</p>
+          <p><strong>Location:</strong> Welverdiend, Cangeni</p>
+          <p>Send us your preferred style and booking date.</p>
+        </div>
 
-        <article class="feature-card">
-          <h3>Easy booking</h3>
-          <p>One click to book through WhatsApp and share with friends.</p>
-        </article>
+        <div class="quick-actions">
+          <a href="https://wa.me/27720654503" target="_blank" class="btn btn-primary">Chat on WhatsApp</a>
+          <a href="#gallery" class="btn btn-outline">See Styles</a>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- STYLES -->
   <section class="section" id="styles">
     <div class="container">
-      <div class="section-head">
-        <h2>Popular Styles</h2>
-        <p>Choose your next beautiful look.</p>
+      <div class="section-title">
+        <h2>Our Braid Styles</h2>
+        <p>Choose from our beautiful and popular braid options.</p>
       </div>
 
-      <div class="styles-grid">
-        <article class="style-card">
-          <img src="images/knotless.jpg" alt="Knotless braids" />
-          <div class="style-body">
-            <h3>Knotless Braids</h3>
-            <p>Lightweight and elegant with a neat finish.</p>
-          </div>
-        </article>
-
-        <article class="style-card">
-          <img src="images/goddess.jpg" alt="Goddess braids" />
-          <div class="style-body">
-            <h3>Goddess Braids</h3>
-            <p>Soft, stylish and beautiful for a premium look.</p>
-          </div>
-        </article>
-
-        <article class="style-card">
-          <img src="images/twist.jpg" alt="Twist braids" />
-          <div class="style-body">
-            <h3>Twist Braids</h3>
-            <p>Simple, classy and perfect for everyday beauty.</p>
-          </div>
-        </article>
-
-        <article class="style-card">
-          <img src="images/freehand.jpg" alt="Freehand braids" />
-          <div class="style-body">
-            <h3>Freehand</h3>
-            <p>Affordable and clean style with a smart finish.</p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-alt" id="prices">
-    <div class="container">
-      <div class="section-head">
-        <h2>Prices</h2>
-        <p>Simple price list for our braid styles.</p>
-      </div>
-
-      <div class="price-grid">
-        <article class="price-card">
-          <h3>Knotless</h3>
-          <div class="price-list">
-            <div><span>Normal</span><strong>R200</strong></div>
-            <div><span>Extended</span><strong>R280</strong></div>
-            <div><span>Jumbo</span><strong>R150</strong></div>
-            <div><span>Shorts</span><strong>R180</strong></div>
-          </div>
-          <a href="https://wa.me/27720654503" target="_blank" class="card-btn">Choose Knotless</a>
-        </article>
-
-        <article class="price-card featured">
-          <span class="badge">Popular</span>
-          <h3>Goddess</h3>
-          <div class="price-list">
-            <div><span>Normal</span><strong>R260</strong></div>
-            <div><span>Extended</span><strong>R300</strong></div>
-            <div><span>Shorts</span><strong>R200</strong></div>
-          </div>
-          <a href="https://wa.me/27720654503" target="_blank" class="card-btn">Choose Goddess</a>
-        </article>
-
-        <article class="price-card">
-          <h3>Twist</h3>
-          <div class="price-list">
-            <div><span>Normal</span><strong>R200</strong></div>
-            <div><span>Goddess</span><strong>R280</strong></div>
-          </div>
-          <a href="https://wa.me/27720654503" target="_blank" class="card-btn">Choose Twist</a>
-        </article>
-
-        <article class="price-card">
-          <h3>Freehand</h3>
-          <div class="price-list">
-            <div><span>Price Range</span><strong>R80-R100</strong></div>
-          </div>
-          <a href="https://wa.me/27720654503" target="_blank" class="card-btn">Choose Freehand</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="contact">
-    <div class="container contact-box">
-      <div class="section-head left">
-        <h2>Contact</h2>
-        <p>Send your preferred style and booking details on WhatsApp.</p>
-      </div>
-
-      <div class="contact-grid">
-        <div class="contact-card">
-          <h3>Send your info</h3>
+      <div class="service-grid">
+        <div class="service-card">
+          <h3>Knotless Braids</h3>
           <ul>
-            <li>Your name</li>
-            <li>Preferred braid style</li>
-            <li>Date you want to come</li>
-            <li>Hair length or size</li>
+            <li>Lightweight and comfortable</li>
+            <li>Beautiful neat finish</li>
+            <li>Normal, extended, jumbo and short options</li>
           </ul>
-          <p class="contact-link">
-            <a href="https://wa.me/27720654503" target="_blank">WhatsApp: 072 065 4503</a>
-          </p>
         </div>
 
-        <div class="contact-card">
-          <h3>Why choose Mira's Beauty</h3>
-          <p><strong>Professional look</strong><br>Neat and premium braid finishing.</p>
-          <p><strong>Affordable prices</strong><br>Beautiful styles at good prices.</p>
-          <p><strong>Simple booking</strong><br>One easy WhatsApp link for appointments.</p>
+        <div class="service-card">
+          <h3>Goddess Braids</h3>
+          <ul>
+            <li>Elegant fashionable style</li>
+            <li>Soft and stylish look</li>
+            <li>Perfect for a trendy finish</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <h3>Twist Braids</h3>
+          <ul>
+            <li>Classic clean braid style</li>
+            <li>Neat and durable</li>
+            <li>Simple and beautiful everyday look</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <h3>Freehand</h3>
+          <ul>
+            <li>Affordable quick style</li>
+            <li>Smart clean appearance</li>
+            <li>Good for simple braid patterns</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <footer class="site-footer">
+  <!-- PRICING -->
+  <section class="section alt-section" id="pricing">
+    <div class="container">
+      <div class="section-title">
+        <h2>Pricing</h2>
+        <p>Clear pricing for your favorite braid styles.</p>
+      </div>
+
+      <div class="price-tabs">
+        <button class="tab-btn active" data-tab="tab1">Knotless</button>
+        <button class="tab-btn" data-tab="tab2">Goddess</button>
+        <button class="tab-btn" data-tab="tab3">Twist</button>
+        <button class="tab-btn" data-tab="tab4">Freehand</button>
+      </div>
+
+      <div class="tab-content active" id="tab1">
+        <div class="price-grid">
+          <div class="price-card">
+            <h3>Normal</h3>
+            <div class="price">R200</div>
+            <p>Clean standard knotless braids.</p>
+          </div>
+          <div class="price-card">
+            <h3>Extended</h3>
+            <div class="price">R280</div>
+            <p>Longer stylish knotless braids.</p>
+          </div>
+          <div class="price-card">
+            <h3>Jumbo</h3>
+            <div class="price">R150</div>
+            <p>Bigger braid lines with bold style.</p>
+          </div>
+          <div class="price-card">
+            <h3>Shorts</h3>
+            <div class="price">R180</div>
+            <p>Short knotless option with neat finish.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="tab2">
+        <div class="price-grid">
+          <div class="price-card">
+            <h3>Normal</h3>
+            <div class="price">R260</div>
+            <p>Elegant goddess braids with beautiful flow.</p>
+          </div>
+          <div class="price-card">
+            <h3>Extended</h3>
+            <div class="price">R300</div>
+            <p>Long goddess braids for a standout look.</p>
+          </div>
+          <div class="price-card">
+            <h3>Shorts</h3>
+            <div class="price">R200</div>
+            <p>Short stylish goddess braid option.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="tab3">
+        <div class="price-grid">
+          <div class="price-card">
+            <h3>Normal</h3>
+            <div class="price">R200</div>
+            <p>Classic twist braids with neat finishing.</p>
+          </div>
+          <div class="price-card">
+            <h3>Goddess Twist</h3>
+            <div class="price">R280</div>
+            <p>Twist braids with a softer stylish look.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="tab4">
+        <div class="price-grid">
+          <div class="price-card">
+            <h3>Freehand</h3>
+            <div class="price">R80 - R100</div>
+            <p>Affordable simple style for quick neat braids.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PACKAGES -->
+  <section class="section" id="packages">
+    <div class="container">
+      <div class="section-title">
+        <h2>View Packages</h2>
+        <p>Choose a package that suits your budget and style.</p>
+      </div>
+
+      <div class="package-grid">
+        <div class="package-card">
+          <span class="package-tag">Budget</span>
+          <h3>Simple Package</h3>
+          <div class="package-price">R80 - R150</div>
+          <ul>
+            <li>Freehand styles</li>
+            <li>Jumbo braid option</li>
+            <li>Neat simple finish</li>
+          </ul>
+          <a href="https://wa.me/27720654503" target="_blank" class="btn btn-primary small">Book Now</a>
+        </div>
+
+        <div class="package-card featured">
+          <span class="package-tag">Popular</span>
+          <h3>Standard Package</h3>
+          <div class="package-price">R180 - R260</div>
+          <ul>
+            <li>Normal knotless</li>
+            <li>Short goddess</li>
+            <li>Normal twist styles</li>
+          </ul>
+          <a href="https://wa.me/27720654503" target="_blank" class="btn btn-primary small">Book Now</a>
+        </div>
+
+        <div class="package-card">
+          <span class="package-tag">Premium</span>
+          <h3>Luxury Package</h3>
+          <div class="package-price">R280 - R300</div>
+          <ul>
+            <li>Extended knotless</li>
+            <li>Extended goddess braids</li>
+            <li>Long premium styling</li>
+          </ul>
+          <a href="https://wa.me/27720654503" target="_blank" class="btn btn-primary small">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section alt-section" id="gallery">
+    <div class="container">
+      <div class="section-title">
+        <h2>Gallery</h2>
+        <p>Photos of some of our braid styles.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item"><img src="images/knotless.jpg" alt="Knotless braids" /></div>
+        <div class="gallery-item"><img src="images/goddess.jpg" alt="Goddess braids" /></div>
+        <div class="gallery-item"><img src="images/twist.jpg" alt="Twist braids" /></div>
+        <div class="gallery-item"><img src="images/freehand.jpg" alt="Freehand braids" /></div>
+        <div class="gallery-item"><img src="images/style5.jpg" alt="Braids style 5" /></div>
+        <div class="gallery-item"><img src="images/style6.jpg" alt="Braids style 6" /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOK -->
+  <section class="section" id="book">
+    <div class="container">
+      <div class="section-title">
+        <h2>Book Your Appointment</h2>
+        <p>Click below to book directly on WhatsApp.</p>
+      </div>
+
+      <div class="booking-box">
+        <h3>Ready for your next hairstyle?</h3>
+        <p>Send your style name, preferred date, and hair length on WhatsApp.</p>
+        <a href="https://wa.me/27720654503?text=Hello%20Mira's%20Beauty%20Braids,%20I%20want%20to%20book%20a%20hairstyle." target="_blank" class="btn btn-primary">
+          Book on WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-title">
+        <h2>Contact Us</h2>
+        <p>Message us for bookings and style enquiries.</p>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-item">
+          <h3>Business Name</h3>
+          <p>Mira's Beauty Braids</p>
+        </div>
+        <div class="contact-item">
+          <h3>WhatsApp</h3>
+          <p>072 065 4503</p>
+        </div>
+        <div class="contact-item">
+          <h3>Location</h3>
+          <p>Welverdiend, Cangeni</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
     <div class="container footer-wrap">
       <p>© 2026 Mira's Beauty Braids</p>
-      <a href="#home">Back to top</a>
+      <p>Designed for GitHub Pages</p>
     </div>
   </footer>
 
-  <a href="https://wa.me/27720654503" class="floating-whatsapp" target="_blank">WhatsApp</a>
+  <a href="https://wa.me/27720654503" target="_blank" class="whatsapp-float">WhatsApp</a>
 
   <script src="script.js"></script>
 </body>
