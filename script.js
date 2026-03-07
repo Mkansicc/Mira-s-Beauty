@@ -30,5 +30,67 @@ if (mapsBtn) mapsBtn.href = mapsLink;
 
 const phoneText = document.getElementById("phoneText");
 if (phoneText) {
-  phoneText.textContent = PHONE.replace(/(\d{3})(\d{3})(\d{4})/, "$1 $3 $4");
+  phoneText.textContent = PHONE.replace(/(\d{3})(\d{3})(\d{4})/, "$1 $2 $3");
 }
+
+/* slideshow */
+const slides = document.querySelectorAll(".slide");
+const dots = document.querySelectorAll(".dot-item");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+
+let currentSlide = 0;
+let autoSlide;
+
+function showSlide(index) {
+  slides.forEach(slide => slide.classList.remove("active"));
+  dots.forEach(dot => dot.classList.remove("active"));
+
+  if (index >= slides.length) currentSlide = 0;
+  else if (index < 0) currentSlide = slides.length - 1;
+  else currentSlide = index;
+
+  slides[currentSlide].classList.add("active");
+  dots[currentSlide].classList.add("active");
+}
+
+function nextSlide() {
+  showSlide(currentSlide + 1);
+}
+
+function prevSlide() {
+  showSlide(currentSlide - 1);
+}
+
+if (nextBtn) {
+  nextBtn.addEventListener("click", () => {
+    nextSlide();
+    restartAutoSlide();
+  });
+}
+
+if (prevBtn) {
+  prevBtn.addEventListener("click", () => {
+    prevSlide();
+    restartAutoSlide();
+  });
+}
+
+dots.forEach((dot, index) => {
+  dot.addEventListener("click", () => {
+    showSlide(index);
+    restartAutoSlide();
+  });
+});
+
+function startAutoSlide() {
+  autoSlide = setInterval(nextSlide, 3000);
+}
+
+function restartAutoSlide() {
+  clearInterval(autoSlide);
+  startAutoSlide();
+}
+
+showSlide(0);
+startAutoSlide();
