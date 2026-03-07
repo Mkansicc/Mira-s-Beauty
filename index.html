@@ -4,161 +4,215 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mira's Beauty Braids</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="overlay"></div>
 
-  <header class="topbar">
-    <div class="logo">Mira's Beauty Braids</div>
+  <header class="site-header" id="top">
+    <div class="brand">Mira’s Beauty Braids</div>
 
-    <nav class="navbar">
+    <nav class="nav">
       <a href="#home">Home</a>
-      <a href="#services">Prices</a>
-      <a href="#gallery">Gallery</a>
+      <a href="#collection">Styles</a>
+      <a href="#prices">Prices</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
 
-    <a class="book-btn" href="https://wa.me/27720654503" target="_blank">Book Now</a>
+    <a class="header-btn" href="https://wa.me/27720654503" target="_blank">Book Now</a>
   </header>
 
   <section class="hero" id="home">
-    <div class="hero-left glass">
-      <h1>Beautiful Braids.<br><span>Professional Finish.</span></h1>
-      <p>
-        Stylish, neat, and affordable braiding services for all occasions.
-        Get knotless braids, goddess braids, twist braids, freehand styles, and more.
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="eyebrow">Luxury Braiding Experience</p>
+      <h1>Elegant braids,<br>beautifully finished.</h1>
+      <p class="hero-text">
+        Premium knotless braids, goddess braids, twists and freehand styles
+        crafted with beauty, care and confidence.
       </p>
-
-      <div class="hero-buttons">
-        <a href="#services" class="btn pink">View Prices</a>
-        <a href="#gallery" class="btn outline">See Styles</a>
-      </div>
-    </div>
-
-    <div class="hero-right glass">
-      <div class="slideshow-container">
-        <img id="slide" src="images/style1.jpg" alt="Braids style slideshow" />
-        <div class="slide-controls">
-          <button onclick="prevSlide()">❮</button>
-          <button onclick="nextSlide()">❯</button>
-        </div>
+      <div class="hero-actions">
+        <a href="#prices" class="btn btn-gold">View Prices</a>
+        <a href="#collection" class="btn btn-outline">Explore Styles</a>
       </div>
     </div>
   </section>
 
-  <section class="services-section" id="services">
-    <div class="section-title">
-      <h2>Our Prices</h2>
-      <p>Affordable beauty with a premium touch</p>
+  <section class="intro split-section">
+    <div class="split-image">
+      <img src="images/style1.jpg" alt="Mira's braid style">
+    </div>
+    <div class="split-text">
+      <p class="eyebrow dark">Welcome to Mira’s</p>
+      <h2>A modern beauty destination for timeless braid styles</h2>
+      <p>
+        We create polished, stylish and comfortable braided looks for women and girls
+        who want to feel confident every day. From everyday beauty to special events,
+        each style is done with detail and care.
+      </p>
+      <a href="#contact" class="text-link">Book your appointment</a>
+    </div>
+  </section>
+
+  <section class="collection-section" id="collection">
+    <div class="section-head light">
+      <p class="eyebrow">Our Collection</p>
+      <h2>Signature braid styles</h2>
     </div>
 
-    <div class="service-grid">
-      <div class="service-card glass">
+    <div class="collection-grid">
+      <article class="collection-card">
+        <img src="images/style2.jpg" alt="Knotless braids">
+        <div class="collection-info">
+          <h3>Knotless Braids</h3>
+          <p>Soft, neat and lightweight braids with a clean natural finish.</p>
+        </div>
+      </article>
+
+      <article class="collection-card">
+        <img src="images/style3.jpg" alt="Goddess braids">
+        <div class="collection-info">
+          <h3>Goddess Braids</h3>
+          <p>Beautiful flowing styles with a fuller premium look.</p>
+        </div>
+      </article>
+
+      <article class="collection-card">
+        <img src="images/style4.jpg" alt="Twist braids">
+        <div class="collection-info">
+          <h3>Twist Braids</h3>
+          <p>Elegant twist designs for a soft and stylish appearance.</p>
+        </div>
+      </article>
+
+      <article class="collection-card">
+        <img src="images/style5.jpg" alt="Freehand braids">
+        <div class="collection-info">
+          <h3>Freehand</h3>
+          <p>Clean freestyle patterns done with precision and beauty.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="feature-banner">
+    <div class="feature-overlay"></div>
+    <div class="feature-inner">
+      <p class="eyebrow">Beauty Experience</p>
+      <h2>Designed to make you look and feel exceptional</h2>
+      <p>
+        Neat lines, professional finishing and beautiful styles that stand out.
+      </p>
+    </div>
+  </section>
+
+  <section class="prices-section" id="prices">
+    <div class="section-head">
+      <p class="eyebrow dark">Pricing</p>
+      <h2>Choose your style</h2>
+    </div>
+
+    <div class="price-columns">
+      <div class="price-card">
         <h3>Knotless Braids</h3>
         <ul>
-          <li>Normal — R200</li>
-          <li>Extended — R280</li>
-          <li>Jumbo — R150</li>
-          <li>Shorts — R180</li>
+          <li><span>Normal</span><strong>R200</strong></li>
+          <li><span>Extended</span><strong>R280</strong></li>
+          <li><span>Jumbo</span><strong>R150</strong></li>
+          <li><span>Shorts</span><strong>R180</strong></li>
         </ul>
       </div>
 
-      <div class="service-card glass">
+      <div class="price-card">
         <h3>Goddess Braids</h3>
         <ul>
-          <li>Normal — R260</li>
-          <li>Extended — R300</li>
-          <li>Shorts — R200</li>
+          <li><span>Normal</span><strong>R260</strong></li>
+          <li><span>Extended</span><strong>R300</strong></li>
+          <li><span>Shorts</span><strong>R200</strong></li>
         </ul>
       </div>
 
-      <div class="service-card glass">
+      <div class="price-card">
         <h3>Twist Braids</h3>
         <ul>
-          <li>Normal — R200</li>
-          <li>Goddess — R280</li>
+          <li><span>Normal</span><strong>R200</strong></li>
+          <li><span>Goddess</span><strong>R280</strong></li>
         </ul>
       </div>
 
-      <div class="service-card glass">
+      <div class="price-card">
         <h3>Freehand</h3>
         <ul>
-          <li>R80 – R100</li>
+          <li><span>Styles</span><strong>R80–R100</strong></li>
         </ul>
       </div>
     </div>
   </section>
 
-  <section class="gallery-section" id="gallery">
-    <div class="section-title">
-      <h2>Style Gallery</h2>
-      <p>Explore our latest braid looks</p>
+  <section class="gallery-section">
+    <div class="section-head light">
+      <p class="eyebrow">Gallery</p>
+      <h2>Beauty in every detail</h2>
     </div>
 
-    <div class="gallery-grid">
-      <div class="gallery-card glass">
-        <img src="images/style1.jpg" alt="Braids Style 1">
-      </div>
-      <div class="gallery-card glass">
-        <img src="images/style2.jpg" alt="Braids Style 2">
-      </div>
-      <div class="gallery-card glass">
-        <img src="images/style3.jpg" alt="Braids Style 3">
-      </div>
-      <div class="gallery-card glass">
-        <img src="images/style4.jpg" alt="Braids Style 4">
-      </div>
-      <div class="gallery-card glass">
-        <img src="images/style5.jpg" alt="Braids Style 5">
-      </div>
-      <div class="gallery-card glass">
-        <img src="images/style6.jpg" alt="Braids Style 6">
-      </div>
+    <div class="slideshow">
+      <button class="slide-btn prev" onclick="prevSlide()">&#10094;</button>
+      <img id="mainSlide" src="images/style1.jpg" alt="Braids gallery slideshow">
+      <button class="slide-btn next" onclick="nextSlide()">&#10095;</button>
+    </div>
+
+    <div class="thumb-row">
+      <img src="images/style1.jpg" onclick="setSlide(0)" alt="">
+      <img src="images/style2.jpg" onclick="setSlide(1)" alt="">
+      <img src="images/style3.jpg" onclick="setSlide(2)" alt="">
+      <img src="images/style4.jpg" onclick="setSlide(3)" alt="">
+      <img src="images/style5.jpg" onclick="setSlide(4)" alt="">
+      <img src="images/style6.jpg" onclick="setSlide(5)" alt="">
     </div>
   </section>
 
   <section class="about-section" id="about">
     <div class="about-grid">
-      <div class="about-text glass">
-        <h2>About Mira’s Beauty Braids</h2>
+      <div>
+        <p class="eyebrow dark">About</p>
+        <h2>Mira’s Beauty Braids</h2>
         <p>
-          We specialize in clean, beautiful, and trendy braiding styles that make you stand out.
-          Whether you want a simple everyday look or a bold premium style, we give every client the care and quality they deserve.
-        </p>
-        <p>
-          We are based in <strong>Welverdiend, Gungeni</strong> and ready to make you look amazing.
+          We offer affordable and premium braid styles in Welverdiend, Gungeni.
+          Every client receives a warm welcome, quality service and a style finished with pride.
         </p>
       </div>
 
-      <div class="about-box glass">
-        <h3>Why Choose Us?</h3>
+      <div class="about-box">
+        <h3>Why clients choose us</h3>
         <ul>
-          <li>Neat and professional finishing</li>
+          <li>Neat and lasting braids</li>
+          <li>Stylish modern looks</li>
           <li>Affordable prices</li>
           <li>Friendly service</li>
-          <li>Beautiful modern styles</li>
-          <li>Quick booking on WhatsApp</li>
+          <li>Easy WhatsApp booking</li>
         </ul>
       </div>
     </div>
   </section>
 
   <section class="contact-section" id="contact">
-    <div class="contact-card glass">
-      <h2>Book Your Appointment</h2>
+    <div class="contact-card">
+      <p class="eyebrow">Contact</p>
+      <h2>Reserve your next look</h2>
       <p><strong>Phone / WhatsApp:</strong> 072 065 4503</p>
       <p><strong>Location:</strong> Welverdiend, Gungeni</p>
-      <div class="contact-buttons">
-        <a href="tel:+27720654503" class="btn pink">Call Now</a>
-        <a href="https://wa.me/27720654503" target="_blank" class="btn outline">WhatsApp</a>
+      <div class="contact-actions">
+        <a href="tel:+27720654503" class="btn btn-dark">Call Now</a>
+        <a href="https://wa.me/27720654503" target="_blank" class="btn btn-gold">WhatsApp</a>
       </div>
     </div>
   </section>
 
-  <footer class="footer">
-    <p>© 2026 Mira's Beauty Braids. All rights reserved.</p>
+  <footer class="site-footer">
+    <p>© 2026 Mira’s Beauty Braids. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>
