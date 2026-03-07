@@ -7,33 +7,29 @@ const slides = [
   "images/style6.jpg"
 ];
 
-let currentSlide = 0;
-const slideImage = document.getElementById("slide");
+let currentIndex = 0;
+const mainSlide = document.getElementById("mainSlide");
 
 function showSlide(index) {
-  currentSlide = index;
+  if (index >= slides.length) currentIndex = 0;
+  else if (index < 0) currentIndex = slides.length - 1;
+  else currentIndex = index;
 
-  if (currentSlide >= slides.length) {
-    currentSlide = 0;
-  }
-
-  if (currentSlide < 0) {
-    currentSlide = slides.length - 1;
-  }
-
-  slideImage.src = slides[currentSlide];
+  mainSlide.src = slides[currentIndex];
 }
 
 function nextSlide() {
-  showSlide(currentSlide + 1);
+  showSlide(currentIndex + 1);
 }
 
 function prevSlide() {
-  showSlide(currentSlide - 1);
+  showSlide(currentIndex - 1);
+}
+
+function setSlide(index) {
+  showSlide(index);
 }
 
 setInterval(() => {
   nextSlide();
-}, 3500);
-
-showSlide(currentSlide);
+}, 4000);
