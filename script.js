@@ -1,6 +1,5 @@
 const menuBtn = document.getElementById("menuBtn");
 const navLinks = document.getElementById("navLinks");
-const themeToggle = document.getElementById("themeToggle");
 
 menuBtn.addEventListener("click", () => {
   navLinks.classList.toggle("show");
@@ -8,8 +7,8 @@ menuBtn.addEventListener("click", () => {
 
 document.querySelectorAll('a[href^="#"]').forEach(link => {
   link.addEventListener("click", function (e) {
-    const targetId = this.getAttribute("href");
-    const target = document.querySelector(targetId);
+    const id = this.getAttribute("href");
+    const target = document.querySelector(id);
 
     if (target) {
       e.preventDefault();
@@ -19,13 +18,17 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   });
 });
 
-const savedTheme = localStorage.getItem("mira-theme");
-if (savedTheme === "light") {
-  document.body.classList.add("light");
-}
+const tabButtons = document.querySelectorAll(".tab-btn");
+const tabContents = document.querySelectorAll(".tab-content");
 
-themeToggle.addEventListener("click", () => {
-  document.body.classList.toggle("light");
-  const currentTheme = document.body.classList.contains("light") ? "light" : "dark";
-  localStorage.setItem("mira-theme", currentTheme);
+tabButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    const target = button.getAttribute("data-tab");
+
+    tabButtons.forEach(btn => btn.classList.remove("active"));
+    tabContents.forEach(tab => tab.classList.remove("active"));
+
+    button.classList.add("active");
+    document.getElementById(target).classList.add("active");
+  });
 });
