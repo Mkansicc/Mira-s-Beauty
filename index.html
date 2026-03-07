@@ -21,7 +21,7 @@
           </div>
         </div>
 
-        <div class="links" aria-label="Page links">
+        <div class="links">
           <a href="#prices">Prices</a>
           <a href="#gallery">Gallery</a>
           <a href="#contact">Contact</a>
@@ -43,7 +43,7 @@
           <h2>Look fresh.<br>Feel confident.<br>Braids done right.</h2>
           <p>
             Knotless, Goddess, Twist & Freehand styles at friendly prices.
-            Send a message to book — and include your preferred style, length, and date.
+            Send a message to book — include your preferred style, length, and date.
           </p>
 
           <div class="hero-actions">
@@ -51,7 +51,7 @@
             <a class="btn" href="#prices">See Prices</a>
           </div>
 
-          <div class="mini" aria-label="Highlights">
+          <div class="mini">
             <span><i></i> Fast & neat</span>
             <span><i></i> Good prices</span>
             <span><i></i> Welverdiend</span>
@@ -111,13 +111,6 @@
             <div class="row"><span>Price Range</span><b>R80 – R100</b></div>
           </div>
         </div>
-
-        <div class="price-card col-12">
-          <h4>Booking note</h4>
-          <p class="booking-note">
-            When messaging, please include: <b>style</b>, <b>length</b>, <b>color</b> (if any), and your <b>preferred date/time</b>.
-          </p>
-        </div>
       </div>
     </div>
   </section>
@@ -125,30 +118,51 @@
   <section id="gallery">
     <div class="wrap">
       <div class="section-title">
-        <h3>Gallery</h3>
-        <p>Styles from your images folder</p>
+        <h3>Gallery Slideshow</h3>
+        <p>Small round framed braid photos</p>
       </div>
 
-      <div class="gallery">
-        <div class="shot">
-          <img src="images/knotles.jpeg" alt="Knotless braids">
-          <div class="cap">Knotless</div>
+      <div class="slideshow-card">
+        <button class="slide-btn prev" id="prevBtn" aria-label="Previous photo">‹</button>
+
+        <div class="slideshow-track">
+          <div class="slide active">
+            <div class="round-photo">
+              <img src="images/knotles.jpeg" alt="Knotless braids">
+            </div>
+            <div class="slide-name">Knotless</div>
+          </div>
+
+          <div class="slide">
+            <div class="round-photo">
+              <img src="images/goddess.jpeg" alt="Goddess braids">
+            </div>
+            <div class="slide-name">Goddess</div>
+          </div>
+
+          <div class="slide">
+            <div class="round-photo">
+              <img src="images/conraws.jpeg" alt="Cornrows">
+            </div>
+            <div class="slide-name">Cornrows</div>
+          </div>
+
+          <div class="slide">
+            <div class="round-photo">
+              <img src="images/fulani.jpeg" alt="Fulani braids">
+            </div>
+            <div class="slide-name">Fulani</div>
+          </div>
         </div>
 
-        <div class="shot">
-          <img src="images/goddess.jpeg" alt="Goddess braids">
-          <div class="cap">Goddess</div>
-        </div>
+        <button class="slide-btn next" id="nextBtn" aria-label="Next photo">›</button>
+      </div>
 
-        <div class="shot">
-          <img src="images/conraws.jpeg" alt="Cornrows">
-          <div class="cap">Cornrows</div>
-        </div>
-
-        <div class="shot">
-          <img src="images/fulani.jpeg" alt="Fulani braids">
-          <div class="cap">Fulani</div>
-        </div>
+      <div class="dots" id="dots">
+        <span class="dot-item active"></span>
+        <span class="dot-item"></span>
+        <span class="dot-item"></span>
+        <span class="dot-item"></span>
       </div>
     </div>
   </section>
